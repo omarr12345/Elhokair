@@ -1,0 +1,174 @@
+.header {
+  background-image: url("../../Assets/Group\ 781.png");
+  background-size: cover;
+  height: 330px;
+  width: 100% !important;
+  z-index: 1030;
+}
+
+.header-content {
+  color: #fff !important;
+  height: 100%;
+  align-items: baseline !important;
+  text-align: center;
+}
+
+.header span {
+  font-size: 22px;
+}
+
+.header-img {
+  height: 110px !important;
+}
+
+.currency {
+  font-size: 25px;
+}
+
+.img-right {
+  text-align: right;
+}
+
+.img-left {
+  text-align: left;
+}
+
+.small-screen-menu-btn-cont {
+  display: none !important;
+}
+
+.top-img-cont {
+  height: 35%;
+}
+
+.head-cont {
+  height: 65%;
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+  .header span {
+    font-size: 25px;
+  }
+  .header h3 {
+    font-size: 25px;
+  }
+  .small-screen-menu-btn-cont {
+    display: block !important;
+  }
+  .currency {
+    font-size: 18px !important;
+  }
+  .sidebar-head {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 530px) {
+  .header span {
+    font-size: 20px;
+  }
+  .header h3 {
+    font-size: 20px;
+  }
+  .img-cont {
+    text-align: center;
+  }
+  .header {
+    height: 45vh;
+  }
+  .small-screen-menu-btn-cont {
+    display: block !important;
+  }
+
+  .sidebar-head {
+    display: none !important;
+  }
+
+  .header-img {
+    height: 50px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 529px) and (min-width: 425px) {
+  .header span {
+    font-size: 20px;
+  }
+  .header h3 {
+    font-size: 20px;
+  }
+  .header {
+    height: 50vh;
+  }
+  .img-cont {
+    text-align: center;
+  }
+  .small-screen-menu-btn-cont {
+    display: block !important;
+  }
+  .header-img {
+    height: 50px;
+    width: 100px;
+  }
+  .sidebar-head {
+    display: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .img-right {
+    text-align: center;
+  }
+
+  .head-cont {
+    height: 79% !important;
+  }
+
+  .top-img-cont {
+    height: 21% !important;
+  }
+
+  .img-left {
+    text-align: center;
+  }
+  .top-logo-img img {
+    width: 100px !important;
+    height: 75px !important;
+  }
+  .sidebar-head {
+    display: none !important;
+  }
+  .header-content img {
+    height: 50px !important;
+    width: 50px !important;
+  }
+}
+
+@media (max-width: 424px) and (min-width: 220px) {
+  .header span {
+    font-size: 16px;
+  }
+  .header h3 {
+    font-size: 20px;
+  }
+
+  .currency {
+    font-size: 14px !important;
+  }
+  .img-cont {
+    text-align: center;
+  }
+
+  .header {
+    height: 50vh;
+  }
+  .small-screen-menu-btn-cont {
+    display: block !important;
+  }
+  .header-img {
+    width: 120px !important;
+  }
+  .sidebar-head {
+    display: none !important;
+  }
+}

@@ -1,0 +1,33 @@
+.disclosure-subcomp p {
+  font-size: 14px !important;
+}
+
+.read-more {
+  font-weight: bold;
+  color: black !important;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.latest-news p {
+  font-size: 14px !important;
+}
+
+.calendar p {
+  font-size: 14px;
+}
+.calendar-date p {
+  font-size: 20px !important;
+  font-weight: 700;
+  /* color: blue; */
+  width: 14%;
+  text-align: center;
+}
+.company-name-en {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.analyst-estimates p {
+  font-size: 14px;
+}

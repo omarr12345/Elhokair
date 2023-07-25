@@ -1,0 +1,9 @@
+.project-filter {
+  width: 50%;
+}
+
+@media (max-width: 992px) {
+  .project-filter {
+    width: 100%;
+  }
+}

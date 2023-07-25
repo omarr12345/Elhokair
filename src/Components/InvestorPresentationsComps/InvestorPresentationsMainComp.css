@@ -1,0 +1,20 @@
+.report-input {
+  background-color: rgb(0, 104, 179);
+  padding: 20px;
+}
+
+.report-input h5 {
+  color: white;
+}
+
+.investor-presentations-filter {
+  background-color: rgb(0, 104, 179);
+}
+
+.css-e83jn5-MuiStack-root > .MuiTextField-root {
+  min-width: 210px !important;
+}
+
+.css-e83jn5-MuiStack-root {
+  padding-top: 0px !important;
+}

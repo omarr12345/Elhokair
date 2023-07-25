@@ -1,0 +1,24 @@
+.chairman-card-data {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+}
+
+.chairman-name {
+  font-weight: bold;
+  color: #0068b3 !important;
+}
+
+.border-yellow {
+  border: solid 5px yellow;
+}
+
+.chairman-card {
+  padding: 3% !important;
+  cursor: pointer;
+}
+
+.profile-img {
+  height: 150px;
+  width: 150px;
+}

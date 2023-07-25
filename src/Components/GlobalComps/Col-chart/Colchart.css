@@ -1,0 +1,46 @@
+.closing {
+  z-index: 10000000000000000000000000000000000000000000000000000000;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 30px;
+  height: 30px;
+}
+
+.chart-img {
+  width: 25px;
+  height: 25px;
+}
+
+.close-img {
+  width: 30px;
+  height: 30px;
+}
+
+.chart-responsive {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: auto;
+  height: 500px !important;
+}
+
+@media (max-width: 768px) and (min-width: 451px) {
+  .chart-responsive {
+    width: 75% !important;
+    height: 400px !important;
+  }
+}
+
+@media (max-width: 450px) and (min-width: 220px) {
+  .chart-responsive {
+    width: 75% !important;
+    height: 300px !important;
+  }
+
+  .chart-img {
+    width: 20px;
+    height: 20px;
+  }
+}

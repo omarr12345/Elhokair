@@ -1,0 +1,35 @@
+.subscription-center-main-comp form input {
+  border-top: 0px !important;
+  border-right: 0px !important;
+  border-left: 0px !important;
+  color: gray;
+  border-color: gray;
+}
+
+.subscription-center-main-comp form input:focus {
+  outline: none;
+}
+
+.intro p {
+  color: gray;
+}
+
+input.larger {
+  width: 15px;
+  height: 15px;
+}
+
+.cancel-btn {
+  padding: 10px !important;
+  width: 200px;
+  border: none;
+  margin: 2px;
+}
+.submit-btn {
+  background-color: #4574a9 !important;
+  color: white !important;
+  padding: 10px !important;
+  width: 200px;
+  border: none;
+  margin: 2px;
+}

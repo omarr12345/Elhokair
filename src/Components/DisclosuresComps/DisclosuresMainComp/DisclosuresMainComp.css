@@ -1,0 +1,10 @@
+/* .page-item.active {
+  background: blue !important;
+  border: none !important;
+} */
+
+@media (max-width: 768px) {
+  .pagination {
+    display: none !important;
+  }
+}

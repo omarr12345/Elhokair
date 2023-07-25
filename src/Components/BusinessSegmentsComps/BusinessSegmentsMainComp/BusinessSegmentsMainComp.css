@@ -1,0 +1,15 @@
+.currency-container button {
+  width: 100px;
+}
+
+.tabs-container button {
+  width: 100px;
+}
+
+.bg-yellow {
+  background-color: yellow !important;
+}
+
+.bg-blue {
+  background-color: blue !important;
+}

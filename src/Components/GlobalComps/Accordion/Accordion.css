@@ -1,0 +1,15 @@
+table img {
+  width: 20px;
+  height: 20px;
+}
+/* 
+@media (min-width: 425px) {
+  .accordion-button {
+    width: 25% !important;
+  }
+} */
+
+.accordion-button::after {
+  display: block;
+  position: absolute;
+}

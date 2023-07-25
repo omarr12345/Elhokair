@@ -1,0 +1,194 @@
+@import url("https://fonts.cdnfonts.com/css/avenir");
+
+* {
+  font-family: "Avenir", sans-serif !important;
+}
+h3 {
+  font-weight: bold !important;
+}
+
+.min-height {
+  min-height: 750px !important;
+}
+
+.html-converted-txt span {
+  font-family: "Avenir", sans-serif !important;
+  font-size: 16px !important;
+}
+
+p {
+  margin: 0px !important;
+}
+
+h3 {
+  margin: 0px !important;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.modal-body img {
+  width: 100% !important;
+}
+
+.modal-content p {
+  font-size: 14px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.modal-dialog {
+  max-width: var(--bs-modal-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.notes-modal-icon {
+  cursor: pointer !important;
+}
+
+img {
+  cursor: pointer;
+}
+.btn.active {
+  background-color: #0068b3 !important;
+  font-weight: bold !important;
+}
+
+hr {
+  margin: 0px !important;
+}
+
+.hr {
+  display: inline-block;
+}
+.hr:after {
+  content: "";
+  display: block;
+  border-top: 1px solid gray;
+}
+
+.react-tabs__tab-list {
+  border-bottom: none !important;
+}
+
+@media (min-width: 1025px) {
+  .nav-underline {
+    position: fixed;
+    z-index: 1050;
+    top: 280px;
+    min-width: 65%;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .nav-underline .nav-link.active {
+    border-bottom: solid 1px white !important;
+    color: white !important;
+    font-weight: 700 !important;
+  }
+  .sub-nav-btn {
+    color: white !important;
+    /* background-color: rgb(0, 104, 179) !important; */
+  }
+  .modal-lg,
+  .modal-xl {
+    --bs-modal-width: 800px;
+  }
+
+  .nav-link {
+    font-weight: 300 !important;
+    color: white !important;
+    text-decoration: none;
+  }
+
+  .navbar-expand-lg .offcanvas {
+    background-color: white !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+  .nav-underline {
+    position: fixed;
+    z-index: 1050;
+    top: 250px;
+    min-width: 65%;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .nav-underline .nav-link.active {
+    border-bottom: solid 1px white !important;
+    color: white !important;
+    font-weight: 700 !important;
+  }
+  .sub-nav-btn {
+    color: white !important;
+    /* background-color: rgb(0, 104, 179) !important; */
+  }
+  .modal-lg,
+  .modal-xl {
+    --bs-modal-width: 800px;
+  }
+
+  .nav-link {
+    font-weight: 300 !important;
+    color: white !important;
+    text-decoration: none;
+  }
+
+  .navbar-expand-lg .offcanvas {
+    background-color: white !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-expand-lg .offcanvas {
+    background-color: white !important;
+  }
+
+  .nav-underline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    color: black !important;
+    margin-top: 56px;
+  }
+  .nav-underline .nav-link.active {
+    border-bottom: solid 2px black !important;
+    color: black !important;
+    font-weight: 700;
+  }
+  .sub-nav-btn {
+    color: black !important;
+    /* background-color: rgb(0, 104, 179) !important; */
+  }
+  .nav-link {
+    color: black !important;
+    text-decoration: none;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 425px) {
+  td,
+  th,
+  button {
+    font-size: 14px !important;
+  }
+  h5 {
+    font-size: 16px !important;
+  }
+  p {
+    font-size: 14px !important;
+  }
+  div {
+    font-size: 14px !important;
+  }
+  .html-converted-txt span {
+    font-size: 14px !important;
+  }
+
+  h3 {
+    font-size: 18px !important;
+  }
+}

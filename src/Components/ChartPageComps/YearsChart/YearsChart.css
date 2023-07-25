@@ -1,0 +1,28 @@
+.shape-input {
+  padding: 20px 5px;
+}
+
+.shape-input select {
+  font-weight: bold;
+  color: gray !important;
+  width: 30%;
+}
+
+.chart-container {
+  margin-left: 20px;
+}
+.shape-input h5 {
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+}
+
+@media (max-width: 425px) {
+  .shape-input select {
+    width: 100%;
+  }
+
+  .chart-container {
+    margin: 0px !important;
+  }
+}

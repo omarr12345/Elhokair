@@ -1,0 +1,39 @@
+.footer {
+  background-color: #212124;
+}
+
+.social-links a {
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  /* box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05); */
+  margin: 0px 5px;
+  transition: all 1s;
+  background-color: transparent !important;
+  color: gray;
+}
+
+.footer p {
+  font-size: 12px !important;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .side-footer-container {
+    display: none;
+  }
+
+  .footer h6 {
+    font-size: 20px;
+  }
+  .footer p {
+    font-size: 13px !important;
+  }
+  .footer a {
+    font-size: 16px;
+  }
+
+  .footer-cont {
+    text-align: center;
+  }
+}
