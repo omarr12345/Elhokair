@@ -13,7 +13,11 @@ function Profile() {
   const { isLoading, isError, data } = useQuery(
     ["profileData"],
     () =>
-      instance.get(`/api/v1.0/json/ir-api/profile`),
+      axios.get(`https://data.argaam.com/api/v1.0/json/ir-api/profile`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }).then(res => res.data),
     {
       refetchOnWindowFocus: false,
       refetchOnMount: false

@@ -100,19 +100,19 @@ function Header() {
               <p>Email :IR@alhokair.com</p>
             </div>
           </div>
-          <div className="col-md-2 col-lg-2 col-12 col-sm-2">
+          <div className="col-md-3 col-lg-2 col-12 col-sm-4">
             <Link to="/chart">
               <img
                 className="img-fluid"
                 src={require("../../Assets/header-chart.png")}
               />
+
             </Link>
-          </div>
-          <div className="col-md-1 col-sm-2">
             {i18n.language === "en"
               ? " Data delayed 15 mins"
               : "يوجد تأخير في البيانات 15 دقيقه"}
           </div>
+
           <div className="col-md-2 col-12 col-sm-2">
             <span>{i18n.language === "en" ? "Price" : "السعر"}</span>&nbsp;
             <span className="currency">

@@ -11,7 +11,7 @@ function BasicInfoSec() {
 
   return (
     <div className="basic-info">
-      <h4 className="mt-5 mb-3">Business</h4>
+      <h4 className="mt-5 mb-3">{i18n.language === "en" ? "Business" : "مجال العمل"}</h4>
       <div
         dangerouslySetInnerHTML={{ __html: i18n.language === "en" ? d?.overviewEn : d?.overviewAr }}
         className="html-converted-txt"

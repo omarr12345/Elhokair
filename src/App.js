@@ -55,7 +55,7 @@ function App() {
   const [auth, setAuth] = useState(false)
 
   useEffect(() => {
-    AccessRefreshTokens.getAccessToken().then(() => setAuth(true))
+    token().then(() => setAuth(true))
   }, [])
 
   if (!auth) {
