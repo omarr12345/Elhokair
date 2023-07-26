@@ -31,23 +31,6 @@ function Sidebar() {
   }, [i18n, navigate]);
   return (
     <div className="sidebar">
-      <div
-        className={
-          i18n.language === "en"
-            ? "sidebar-head text-start"
-            : "sidebar-head text-end"
-        }
-      >
-        <h1>{i18n.language === "en" ? "Investors" : "علاقات"}</h1>
-        <h1>{i18n.language === "en" ? "Relations" : "المستثمرين"}</h1>
-        <p>
-          Phone
-          {i18n.language === "en"
-            ? ":+996 11 413 4444"
-            : ":+996 11 413 4444"}
-        </p>
-        <p>Email :IR@alhokair.com</p>
-      </div>
       <nav className="nav flex-column navbar-expand-lg">
         <div
           className="offcanvas offcanvas-end"
@@ -76,7 +59,6 @@ function Sidebar() {
             </div>
 
             <ul className={i18n.language === "en" ? "text-start" : "text-end"}>
-
               <li className="nav-item">
                 <NavLink
                   onClick={handleLinksClick}
@@ -325,7 +307,6 @@ function Sidebar() {
         </div>
       </nav>
     </div>
-
   );
 }
 

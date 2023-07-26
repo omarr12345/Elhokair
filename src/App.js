@@ -52,22 +52,22 @@ import AccessRefreshTokens, { token } from "./Services/services";
 import { useState, useEffect } from "react";
 import Loader from "./Components/GlobalComps/Loader/Loader";
 function App() {
-  const [auth, setAuth] = useState(false)
+  const [auth, setAuth] = useState(false);
 
   useEffect(() => {
-    token().then(() => setAuth(true))
-  }, [])
+    token().then(() => setAuth(true));
+  }, []);
 
   if (!auth) {
-    return <Loader />
-  }
-  else {
+    return <Loader />;
+  } else {
     return (
       <div className="App">
         <Header />
         <div className="container-lg">
           <div className="row">
             <div className="col-lg-3 col-md-12 sidebar-container p-0">
+              <Sidebar />
             </div>
             <div className="col-lg-9 col-md-12 col-sm-12 col-12 px-3">
               <div className="min-height mx-3">
@@ -105,7 +105,6 @@ function App() {
                     />
                   </Route>
                   <Route path="/overview" element={<Overview />}>
-
                     <Route index element={<CompnayOverview />} />
                     <Route
                       path="/overview/company-overview"
@@ -126,7 +125,10 @@ function App() {
                       element={<CorporateActions />}
                     />
 
-                    <Route path="/overview/disclosers" element={<Disclosers />} />
+                    <Route
+                      path="/overview/disclosers"
+                      element={<Disclosers />}
+                    />
                   </Route>
                   <Route path="/board&managment" element={<Board />}>
                     <Route index element={<BoardMainSec />} />
@@ -165,7 +167,10 @@ function App() {
                       element={<HistoricalChanges />}
                     />
                   </Route>
-                  <Route path="/negotiated-deals" element={<NegotiatedDeals />} />
+                  <Route
+                    path="/negotiated-deals"
+                    element={<NegotiatedDeals />}
+                  />
                   <Route
                     path="/financial-statments"
                     element={<FinancialStatments />}
@@ -174,11 +179,11 @@ function App() {
                     path="/financial-ratios"
                     element={<FinancialRatiosPage />}
                   />
-                  <Route path="/financial-reports" element={<FinancialReports />}>
-                    <Route
-                      index
-                      element={<Annual />}
-                    />
+                  <Route
+                    path="/financial-reports"
+                    element={<FinancialReports />}
+                  >
+                    <Route index element={<Annual />} />
                     <Route
                       path="/financial-reports/annual"
                       element={<Annual />}
@@ -228,7 +233,10 @@ function App() {
                   </Route>
 
                   <Route path="/projects" element={<Projects />} />
-                  <Route path="/analyst-coverage" element={<AnalystCoverage />} />
+                  <Route
+                    path="/analyst-coverage"
+                    element={<AnalystCoverage />}
+                  />
                   <Route
                     path="/subscription-center"
                     element={<SubscriptionCenter />}
@@ -240,10 +248,7 @@ function App() {
                   />
 
                   <Route path="/disclosures" element={<DisclosuresPage />}>
-                    <Route
-                      index
-                      element={<DisclosuresMainComp />}
-                    />
+                    <Route index element={<DisclosuresMainComp />} />
                     <Route
                       path="/disclosures/main-sec"
                       element={<DisclosuresMainComp />}
@@ -261,8 +266,9 @@ function App() {
           </div>
         </div>
         <Newsbar />
-        <div className="container-fluid"><Footer /></div>
-
+        <div className="container-fluid">
+          <Footer />
+        </div>
       </div>
     );
   }
