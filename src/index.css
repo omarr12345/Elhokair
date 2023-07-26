@@ -8,7 +8,7 @@ h3 {
 }
 
 .min-height {
-  min-height: 750px !important;
+  min-height: 530px !important;
 }
 
 .html-converted-txt span {
@@ -70,6 +70,29 @@ hr {
 
 .react-tabs__tab-list {
   border-bottom: none !important;
+}
+
+.nav-underline li a {
+  font-size: 13px !important;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #0068b3;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: blue;
 }
 
 @media (min-width: 1025px) {

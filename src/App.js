@@ -68,7 +68,6 @@ function App() {
         <div className="container-lg">
           <div className="row">
             <div className="col-lg-3 col-md-12 sidebar-container p-0">
-              <Sidebar />
             </div>
             <div className="col-lg-9 col-md-12 col-sm-12 col-12 px-3">
               <div className="min-height mx-3">
@@ -260,10 +259,10 @@ function App() {
               </div>
             </div>
           </div>
-          <Footer />
-
-          <Newsbar />
         </div>
+        <Newsbar />
+        <div className="container-fluid"><Footer /></div>
+
       </div>
     );
   }
