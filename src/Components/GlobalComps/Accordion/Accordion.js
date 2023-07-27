@@ -6,7 +6,6 @@ import { useState } from "react";
 import { ChartModal } from "../ChartModal/ChartModal";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { AiOutlineDown } from "react-icons/ai"
 
 function Accordion(props) {
   const { i18n } = useTranslation();
@@ -238,7 +237,7 @@ function Accordion(props) {
                     <tr
                       key={tIndex}
                       id={"flush-collapse-" + tabIndex}
-                      className="accordion-collapse collapse"
+                      className={tabIndex === 0 ? "accordion-collapse collapse show" : "accordion-collapse collapse"}
                       data-bs-parent="#accordionFlushExample"
                       data-mdb-toggle="animation"
                       data-mdb-animation-reset="true"

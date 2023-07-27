@@ -95,6 +95,14 @@ hr {
   background-color: blue;
 }
 
+.nav-link {
+  padding: 0px !important;
+}
+
+.nav-underline {
+  justify-content: space-between;
+}
+
 @media (min-width: 1200px) {
   .nav-underline {
     position: fixed;
@@ -134,6 +142,7 @@ hr {
     border-bottom: solid 1px blue !important;
     color: blue !important;
     font-weight: 700 !important;
+    justify-content: space-between;
   }
   .sub-nav-btn {
     color: blue !important;

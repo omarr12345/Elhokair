@@ -48,7 +48,7 @@ export function CorporateActions() {
         <li className="nav-item">
           <NavLink
             className="nav-link" to={{
-              pathname: "/corporate-actions/capital-changes",
+              pathname: "/corporate-actions-fullpage/capital-changes",
               search: `${window.location.search}`,
             }}
           >
@@ -58,7 +58,7 @@ export function CorporateActions() {
         <li className="nav-item">
           <NavLink
             className="nav-link" to={{
-              pathname: "/corporate-actions/historical-dividends",
+              pathname: "/corporate-actions-fullpage/historical-dividends",
               search: `${window.location.search}`,
             }}
           >
@@ -69,7 +69,7 @@ export function CorporateActions() {
         <li className="nav-item">
           <NavLink
             className="nav-link" to={{
-              pathname: "/corporate-actions/recent-changes",
+              pathname: "/corporate-actions-fullpage/recent-changes",
               search: `${window.location.search}`,
             }}
           >
@@ -80,7 +80,7 @@ export function CorporateActions() {
         <li className="nav-item">
           <NavLink
             className="nav-link" to={{
-              pathname: "/corporate-actions/recent-dividends",
+              pathname: "/corporate-actions-fullpage/recent-dividends",
               search: `${window.location.search}`,
             }}
           >

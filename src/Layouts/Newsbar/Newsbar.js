@@ -61,7 +61,7 @@ function Newsbar() {
         <li>
           <p
             className="m-0 d-flex flex-row justify-content-between align-items-center"
-            style={{ width: "150px" }}
+
           >
             <span>
               {i18n.language === "en" ? "Transactions :" : "عدد الصفقات:"}{" "}
@@ -73,7 +73,7 @@ function Newsbar() {
         <li>
           <p
             className="m-0 d-flex flex-row justify-content-between align-items-center"
-            style={{ width: "150px" }}
+
           >
             <span>{i18n.language === "en" ? "Turmover :" : "التضخم:"}</span>
             <span>{isNegative(data?.price?.amount)}</span>

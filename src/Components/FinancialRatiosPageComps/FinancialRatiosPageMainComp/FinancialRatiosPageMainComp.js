@@ -4,8 +4,6 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import { useEffect, useState } from "react";
 import FinancialRatiosAccordion from "../FinancialRatiosAccordion/FinancialRatiosAccordion";
-import { AiOutlineFilePdf, AiOutlinePrinter } from "react-icons/ai";
-import { BsFiletypeDoc } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 import { Loader } from "rsuite";
 

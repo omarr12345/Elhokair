@@ -2,7 +2,7 @@
 import React, { useRef, useEffect } from "react";
 import "./Sidebar.css";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -15,6 +15,8 @@ function Sidebar() {
       top: 0,
     });
   };
+
+  const location = useLocation()
 
   useEffect(() => {
     if (window.location.search === "?lang=ar") {
@@ -64,7 +66,7 @@ function Sidebar() {
                   onClick={handleLinksClick}
                   className="nav-link"
                   to={{
-                    pathname: "/overview",
+                    pathname: "/",
 
                     search: `${window.location.search}`,
                   }}
@@ -175,7 +177,7 @@ function Sidebar() {
                   onClick={handleLinksClick}
                   className="nav-link"
                   to={{
-                    pathname: "/financial-ratios",
+                    pathname: "/financial-ratios-fullpage",
                     search: `${window.location.search}`,
                   }}
                 >
@@ -234,7 +236,7 @@ function Sidebar() {
                   onClick={handleLinksClick}
                   className="nav-link"
                   to={{
-                    pathname: "/corporate-actions",
+                    pathname: "/corporate-actions-fullpage",
 
                     search: `${window.location.search}`,
                   }}

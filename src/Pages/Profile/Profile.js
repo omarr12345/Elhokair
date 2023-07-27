@@ -5,8 +5,7 @@ import axios from "axios";
 import { NavLink, Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Loader from "../../Components/GlobalComps/Loader/Loader";
-import instance from "../../Services/api";
-import { useEffect } from "react";
+
 
 function Profile() {
   const { i18n } = useTranslation();

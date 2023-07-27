@@ -85,7 +85,7 @@ function AnalystCoverageAccordion(props) {
                       <tr
                         key={keyValueIndex}
                         id={"flush-collapse-" + tabIndex}
-                        className="accordion-collapse collapse"
+                        className={tabIndex === 0 ? "accordion-collapse collapse show" : "accordion-collapse collapse"}
                         data-bs-parent="#accordionFlushExample"
                         data-mdb-toggle="animation"
                         data-mdb-animation-reset="true"

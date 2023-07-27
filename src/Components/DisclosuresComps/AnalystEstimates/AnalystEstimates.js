@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 function AnalystEstimates() {
   const { i18n } = useTranslation();
-  const data = useOutletContext()?.AnalystEstimatesData.analystEstimates;
+  const data = useOutletContext()?.AnalystEstimatesData?.analystEstimates;
 
   return (
     <div className="my-5">

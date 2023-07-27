@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./BasicInfoSec.css";
 import BusinessSec from "../BusinessSec/BusinessSec";
 import { useOutletContext } from "react-router";

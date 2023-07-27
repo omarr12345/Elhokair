@@ -48,12 +48,11 @@ import HistoricalChanges from "./Components/MajorShareholderComps/HistoricalChan
 import BoardMainSec from "./Components/BoardComps/BoardMainSec/BoardMainSec";
 import SalariesAndBonuses from "./Components/BoardComps/Salaries&Bonuses/Salaries&Bonuses";
 import CompnayOverview from "./Components/OverviewComps/CompanyOverview/CompnayOverview";
-import AccessRefreshTokens, { token } from "./Services/services";
+import { token } from "./Services/services";
 import { useState, useEffect } from "react";
 import Loader from "./Components/GlobalComps/Loader/Loader";
 function App() {
   const [auth, setAuth] = useState(false);
-
   useEffect(() => {
     token().then(() => setAuth(true));
   }, []);
@@ -72,7 +71,34 @@ function App() {
             <div className="col-lg-9 col-md-12 col-sm-12 col-12 px-3">
               <div className="min-height mx-3">
                 <Routes>
-                  <Route path="/" element={<CompnayOverview />} />
+
+                  <Route path="/" element={<Overview />}>
+                    <Route index element={<CompnayOverview />} />
+                    <Route
+                      path="/company-overview"
+                      element={<CompnayOverview />}
+                    />
+                    <Route
+                      path="/market-data"
+                      element={<MarketData />}
+                    />
+
+                    <Route
+                      path="/financial-ratios"
+                      element={<FinancialRatios />}
+                    />
+
+                    <Route
+                      path="/corporate-actions"
+                      element={<CorporateActions />}
+                    />
+
+                    <Route
+                      path="/disclosers"
+                      element={<Disclosers />}
+                    />
+                  </Route>
+
                   <Route path="/profile" element={<Profile />}>
                     <Route index element={<BasicInfoSec />} />
                     <Route
@@ -104,32 +130,7 @@ function App() {
                       element={<MilestonesSec />}
                     />
                   </Route>
-                  <Route path="/overview" element={<Overview />}>
-                    <Route index element={<CompnayOverview />} />
-                    <Route
-                      path="/overview/company-overview"
-                      element={<CompnayOverview />}
-                    />
-                    <Route
-                      path="/overview/market-data"
-                      element={<MarketData />}
-                    />
 
-                    <Route
-                      path="/overview/financial-ratios"
-                      element={<FinancialRatios />}
-                    />
-
-                    <Route
-                      path="/overview/corporate-actions"
-                      element={<CorporateActions />}
-                    />
-
-                    <Route
-                      path="/overview/disclosers"
-                      element={<Disclosers />}
-                    />
-                  </Route>
                   <Route path="/board&managment" element={<Board />}>
                     <Route index element={<BoardMainSec />} />
                     <Route
@@ -176,7 +177,7 @@ function App() {
                     element={<FinancialStatments />}
                   />
                   <Route
-                    path="/financial-ratios"
+                    path="/financial-ratios-fullpage"
                     element={<FinancialRatiosPage />}
                   />
                   <Route
@@ -209,25 +210,25 @@ function App() {
                   />
 
                   <Route
-                    path="/corporate-actions"
+                    path="/corporate-actions-fullpage"
                     element={<CorporateActionsPage />}
                   >
                     <Route index element={<CapitalChanges />} />
                     <Route
-                      path="/corporate-actions/capital-changes"
+                      path="/corporate-actions-fullpage/capital-changes"
                       element={<CapitalChanges />}
                     />
 
                     <Route
-                      path="/corporate-actions/historical-dividends"
+                      path="/corporate-actions-fullpage/historical-dividends"
                       element={<HistoricalDividends />}
                     />
                     <Route
-                      path="/corporate-actions/recent-changes"
+                      path="/corporate-actions-fullpage/recent-changes"
                       element={<RecentChanges />}
                     />
                     <Route
-                      path="/corporate-actions/recent-dividends"
+                      path="/corporate-actions-fullpage/recent-dividends"
                       element={<RecentDividends />}
                     />
                   </Route>

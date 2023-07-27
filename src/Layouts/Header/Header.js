@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { RiArrowDownCircleFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import Sidebar from "../Sidebar/Sidebar";
 function Header() {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
@@ -107,6 +106,7 @@ function Header() {
                 <img
                   className="img-fluid"
                   src={require("../../Assets/header-chart.png")}
+                  alt="chart"
                 />
               </Link>
               {i18n.language === "en"
@@ -134,7 +134,7 @@ function Header() {
                 {i18n.language === "en"
                   ? "-" + formatter(Math.abs(data?.companyStockSummary?.change))
                   : Math.abs(formatter(data?.companyStockSummary?.change)) +
-                    "-"}
+                  "-"}
               </h4>
             </div>
             <div className="col-md-1 col-12 col-sm-2">
@@ -142,12 +142,12 @@ function Header() {
               <h4>
                 {i18n.language === "en"
                   ? "-" +
-                    formatter(
-                      Math.abs(data?.companyStockSummary?.percentageChange)
-                    )
+                  formatter(
+                    Math.abs(data?.companyStockSummary?.percentageChange)
+                  )
                   : Math.abs(
-                      formatter(data?.companyStockSummary?.percentageChange)
-                    ) + "-"}
+                    formatter(data?.companyStockSummary?.percentageChange)
+                  ) + "-"}
               </h4>
             </div>
           </div>

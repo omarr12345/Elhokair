@@ -3,7 +3,6 @@ import { isNegative } from "../../../Services/services";
 // import moment from "moment/moment";
 import React from "react";
 import { useState } from "react";
-import moment from "moment";
 import Highcharts from "highcharts";
 import { ChartModal } from "../../GlobalComps/ChartModal/ChartModal";
 import { useTranslation } from "react-i18next";
@@ -214,7 +213,7 @@ function FinancialRatiosAccordion(props) {
                     <tr
                       key={tIndex}
                       id={"flush-collapse-" + tabIndex}
-                      className="accordion-collapse collapse"
+                      className={tabIndex === 0 ? "accordion-collapse collapse show" : "accordion-collapse collapse"}
                       data-bs-parent="#accordionFlushExample"
                       data-mdb-toggle="animation"
                       data-mdb-animation-reset="true"

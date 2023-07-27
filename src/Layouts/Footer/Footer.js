@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="footer">
+    <div className="footer" style={{ zIndex: "1000000" }}>
       <div className="container-lg text-center">
         <div className="row justify-content-space-between text-white p-3 footer-cont">
           <div className="col-md-3 col-lg-3 col-sm-3 col-12">

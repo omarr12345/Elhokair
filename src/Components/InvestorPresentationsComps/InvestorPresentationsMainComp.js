@@ -1,5 +1,5 @@
 import "./InvestorPresentationsMainComp.css";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 // ** Import Use Translation
 import axios from "axios";
 import moment from "moment";

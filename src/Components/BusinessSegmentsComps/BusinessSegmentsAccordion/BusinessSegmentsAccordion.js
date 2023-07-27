@@ -199,7 +199,7 @@ function BusinessSegmentsAccordion(props) {
                     <tr
                       key={bsIndex}
                       id={"flush-collapse-" + rIndex}
-                      className="accordion-collapse collapse"
+                      className={rIndex === 0 ? "accordion-collapse collapse show" : "accordion-collapse collapse"}
                       data-bs-parent="#accordionFlushExample"
                       data-mdb-toggle="animation"
                       data-mdb-animation-reset="true"
