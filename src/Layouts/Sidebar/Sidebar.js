@@ -16,7 +16,7 @@ function Sidebar() {
     });
   };
 
-  const location = useLocation()
+  const location = useLocation();
 
   useEffect(() => {
     if (window.location.search === "?lang=ar") {
@@ -59,7 +59,6 @@ function Sidebar() {
                 />
               </button>
             </div>
-
             <ul className={i18n.language === "en" ? "text-start" : "text-end"}>
               <li className="nav-item">
                 <NavLink
@@ -71,7 +70,7 @@ function Sidebar() {
                     search: `${window.location.search}`,
                   }}
                 >
-                  {i18n.language === "en" ? "Overview" : "معلومات الشركه"}
+                  {i18n.language === "en" ? "Overview" : "معلومات الشركة"}
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -83,7 +82,7 @@ function Sidebar() {
                     search: `${window.location.search}`,
                   }}
                 >
-                  {i18n.language === "en" ? "Profile" : "ملف الشركه"}
+                  {i18n.language === "en" ? "Profile" : "ملف الشركة"}
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -113,21 +112,7 @@ function Sidebar() {
                   {i18n.language === "en" ? "Chart" : "تشارت"}
                 </NavLink>
               </li>
-              {/* <li className="nav-item">
-                <NavLink
-                  to={{
-                    pathname: "/investor-calculator",
 
-                    search: `${window.location.search}`,
-                  }}
-
-                  className="nav-link"
-                >
-                  {i18n.language === "en"
-                    ? "Investor Calculator"
-                    : "حاسبة المستثمر"}
-                </NavLink>
-              </li> */}
               <li className="nav-item">
                 <NavLink
                   onClick={handleLinksClick}
@@ -155,7 +140,7 @@ function Sidebar() {
                 >
                   {i18n.language === "en"
                     ? "Negotiated Deals"
-                    : " الصفقات الخاصه"}
+                    : "الصفقات الخاصة"}
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -169,7 +154,7 @@ function Sidebar() {
                 >
                   {i18n.language === "en"
                     ? "Financial Statements"
-                    : "القوائم الماليه"}
+                    : "القوائم المالية"}
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -183,7 +168,7 @@ function Sidebar() {
                 >
                   {i18n.language === "en"
                     ? "Financial Ratios"
-                    : "المؤشرات الماليه"}
+                    : "المؤشرات المالية"}
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -197,7 +182,7 @@ function Sidebar() {
                 >
                   {i18n.language === "en"
                     ? "Financial Reports"
-                    : "التقارير الماليه "}
+                    : "التقارير المالية "}
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -212,7 +197,7 @@ function Sidebar() {
                 >
                   {i18n.language === "en"
                     ? "Investor Presentation"
-                    : "عرض المستثمر"}
+                    : "عرض المستثمرين"}
                 </NavLink>
               </li>
 
@@ -243,7 +228,7 @@ function Sidebar() {
                 >
                   {i18n.language === "en"
                     ? "Corporate Actions"
-                    : "اجراءات الشركه"}
+                    : "اجراءات الشركة"}
                 </NavLink>
               </li>
 
@@ -272,7 +257,7 @@ function Sidebar() {
                 >
                   {i18n.language === "en"
                     ? "Analyst Coverage"
-                    : "التحليل القطاعي"}{" "}
+                    : "التحليل القطاعي"}
                 </NavLink>
               </li>
 
@@ -299,7 +284,7 @@ function Sidebar() {
                 >
                   {i18n.language === "en"
                     ? "Subscription Center"
-                    : "مركز الاشتراك"}{" "}
+                    : "مركز الاشتراك"}
                 </NavLink>
               </li>
               <br />

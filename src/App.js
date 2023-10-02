@@ -51,6 +51,8 @@ import CompnayOverview from "./Components/OverviewComps/CompanyOverview/CompnayO
 import { token } from "./Services/services";
 import { useState, useEffect } from "react";
 import Loader from "./Components/GlobalComps/Loader/Loader";
+import AnalystCoverageMainComp from "./Components/AnalystCoverageComps/AnalystCoverageMainComp/AnalystCoverageMainComp";
+import Opinions from "./Components/AnalystCoverageComps/Opinions/Opinions";
 function App() {
   const [auth, setAuth] = useState(false);
   useEffect(() => {
@@ -71,17 +73,13 @@ function App() {
             <div className="col-lg-9 col-md-12 col-sm-12 col-12 px-3">
               <div className="min-height mx-3">
                 <Routes>
-
                   <Route path="/" element={<Overview />}>
                     <Route index element={<CompnayOverview />} />
                     <Route
                       path="/company-overview"
                       element={<CompnayOverview />}
                     />
-                    <Route
-                      path="/market-data"
-                      element={<MarketData />}
-                    />
+                    <Route path="/market-data" element={<MarketData />} />
 
                     <Route
                       path="/financial-ratios"
@@ -93,10 +91,7 @@ function App() {
                       element={<CorporateActions />}
                     />
 
-                    <Route
-                      path="/disclosers"
-                      element={<Disclosers />}
-                    />
+                    <Route path="/disclosers" element={<Disclosers />} />
                   </Route>
 
                   <Route path="/profile" element={<Profile />}>
@@ -150,10 +145,6 @@ function App() {
                       element={<HistoricalTradingData />}
                     />
                   </Route>
-                  {/* <Route
-                    path="/investorcalculator"
-                    element={<InvestorCalculator />}
-                  /> */}
                   <Route
                     path="/majorshareholders"
                     element={<MajorShareholders />}
@@ -234,10 +225,17 @@ function App() {
                   </Route>
 
                   <Route path="/projects" element={<Projects />} />
-                  <Route
-                    path="/analyst-coverage"
-                    element={<AnalystCoverage />}
-                  />
+                  <Route path="/analyst-coverage" element={<AnalystCoverage />}>
+                    <Route index element={<AnalystCoverageMainComp />} />
+                    <Route
+                      path="/analyst-coverage/analyst-estimates"
+                      element={<AnalystCoverageMainComp />}
+                    />
+                    <Route
+                      path="/analyst-coverage/opinions"
+                      element={<Opinions />}
+                    />
+                  </Route>
                   <Route
                     path="/subscription-center"
                     element={<SubscriptionCenter />}

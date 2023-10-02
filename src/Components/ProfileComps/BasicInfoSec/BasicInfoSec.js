@@ -11,9 +11,14 @@ function BasicInfoSec() {
 
   return (
     <div className="basic-info">
-      <h4 className="mt-5 mb-3">{i18n.language === "en" ? "Business" : "مجال العمل"}</h4>
+      {console.log(d)}
+      <h4 className="mt-5 mb-3">
+        {i18n.language === "en" ? "Business" : "مجال العمل"}
+      </h4>
       <div
-        dangerouslySetInnerHTML={{ __html: i18n.language === "en" ? d?.overviewEn : d?.overviewAr }}
+        dangerouslySetInnerHTML={{
+          __html: i18n.language === "en" ? d?.overviewEn : d?.overviewAr,
+        }}
         className="html-converted-txt"
       />
       <BusinessSec
@@ -26,33 +31,49 @@ function BasicInfoSec() {
           </h4>
           <hr />
           <div className="col-md-12 d-flex justify-content-between my-2">
-            <div>{i18n.language === "en" ? "City" : "المدينه"}</div>
-            <div>{i18n.language === "en" ? d?.cityNameEn : d?.cityNameAr}</div>
+            <div className="w-50">
+              {i18n.language === "en" ? "City" : "المدينه"}
+            </div>
+            <div className="w-50">
+              {i18n.language === "en" ? d?.cityNameEn : d?.cityNameAr}
+            </div>
           </div>
           <div className="col-md-12 d-flex justify-content-between my-2">
-            <div>
+            <div className="w-50">
               {i18n.language === "en" ? "Website" : "الموقع الالكتروني"}
             </div>
-            <div>{d?.websiteURL}</div>
+            <div className="w-50">{d?.websiteURL}</div>
           </div>
           <div className="col-md-12 d-flex justify-content-between my-2">
-            <div>{i18n.language === "en" ? "Email" : "الايميل"}</div>
-            <div>{d?.email}</div>
+            <div className="w-50">
+              {i18n.language === "en" ? "Email" : "الايميل"}
+            </div>
+            <div className="w-50">{d?.email}</div>
           </div>
           <div className="col-md-12 d-flex justify-content-between my-2">
-            <div>{i18n.language === "en" ? "Phone" : "الهاتف"}</div>
-            <div>{d?.phone}</div>
+            <div className="w-50">
+              {i18n.language === "en" ? "Phone" : "الهاتف"}
+            </div>
+            <div className="w-50">{d?.phone}</div>
           </div>
           <div className="col-md-12 d-flex justify-content-between my-2">
-            <div>{i18n.language === "en" ? "Fax" : "فاكس"}</div>
-            <div>{d?.fax}</div>
+            <div className="w-50">
+              {i18n.language === "en" ? "Fax" : "فاكس"}
+            </div>
+            <div className="w-50">{d?.fax}</div>
           </div>
           <div className="col-md-12 d-flex justify-content-between my-2">
-            <div>{i18n.language === "en" ? "P.O Box" : "صندوق البريد"}</div>
-            <div>{i18n.language === "en" ? d?.boxEn : d?.boxAr}</div>
+            <div className="w-50">
+              {i18n.language === "en" ? "P.O Box" : "صندوق البريد"}
+            </div>
+            <div className="w-50">
+              {i18n.language === "en" ? d?.poBoxEn : d?.poBoxAr}
+            </div>
           </div>
           <div className="col-md-12 d-flex justify-content-between my-2">
-            <div>{i18n.language === "en" ? "Address" : "العنوان"}</div>
+            <div className="w-50">
+              {i18n.language === "en" ? "Address" : "العنوان"}
+            </div>
             <div className="w-50">
               {i18n.language === "en" ? d?.addressEn : d?.addressAr}
             </div>

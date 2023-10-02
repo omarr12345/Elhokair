@@ -1,30 +1,32 @@
 import React, { useEffect, useState } from "react";
-import "./Board.css";
 import { useQuery } from "react-query";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 import Loader from "../../Components/GlobalComps/Loader/Loader";
 import { NavLink, Outlet } from "react-router-dom";
-import AccessRefreshTokens, { token } from "../../Services/services";
+import AccessRefreshTokens from "../../Services/services";
 
 function Board() {
   const { i18n } = useTranslation();
 
-  const { isLoading, isError, data } = useQuery("Board", () => AccessRefreshTokens.getAccessToken().then(
-    () => axios
-      .get(
-        `https://data.argaam.com/api/v1.0/json/ir-api/organizational-structure`,
-        {
-          headers: {
-            authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      )
-      .then((res) => res.data)
-
-  ), {
-    refetchOnWindowFocus: false
-  }
+  const { isLoading, isError, data } = useQuery(
+    "Board",
+    () =>
+      AccessRefreshTokens.getAccessToken().then(() =>
+        axios
+          .get(
+            `https://data.argaam.com/api/v1.0/json/ir-api/organizational-structure`,
+            {
+              headers: {
+                authorization: `Bearer ${localStorage.getItem("token")}`,
+              },
+            }
+          )
+          .then((res) => res.data)
+      ),
+    {
+      refetchOnWindowFocus: false,
+    }
   );
 
   const [boardMembers, setBoardMem] = useState();
@@ -33,7 +35,7 @@ function Board() {
 
   const [executives, setExecutives] = useState();
 
-  const [salariesAndBonuses, setSalariesAndBonuses] = useState()
+  const [salariesAndBonuses, setSalariesAndBonuses] = useState();
 
   useEffect(() => {
     setChairman(
@@ -59,10 +61,14 @@ function Board() {
         );
       })
     );
-    setSalariesAndBonuses(data?.salaries)
+    setSalariesAndBonuses(data?.salaries);
   }, [data?.individuals, data?.salaries]);
   if (isLoading) {
-    return <div><Loader /></div>;
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
   }
   if (isError) {
     return <div>is Error</div>;
@@ -77,9 +83,9 @@ function Board() {
               search: `${window.location.search}`,
             }}
             className="nav-link"
-
           >
-            {i18n.language === "en" ? "Board And Managment" : " الادارة"}          </NavLink>
+            {i18n.language === "en" ? "Board And Managment" : " الادارة"}
+          </NavLink>
         </li>
         <hr />
         <li className="nav-item">
@@ -93,10 +99,11 @@ function Board() {
             {i18n.language === "en" ? "Salaries&Bonuses" : "الرواتب و المكافأت"}
           </NavLink>
         </li>
-
       </ul>
       {/* <BoardMainSec /> */}
-      <Outlet context={{ boardMembers, chairman, executives, salariesAndBonuses }} />
+      <Outlet
+        context={{ boardMembers, chairman, executives, salariesAndBonuses }}
+      />
     </div>
   );
 }

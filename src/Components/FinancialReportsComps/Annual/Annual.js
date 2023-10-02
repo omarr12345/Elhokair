@@ -22,7 +22,11 @@ function Annual() {
 
   //While Is Loading
   if (isLoading) {
-    return <div><Loader /></div>;
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
   }
 
   //While Is Error
@@ -37,48 +41,54 @@ function Annual() {
         <table className="table">
           <thead>
             <tr>
-              <th className="fw-bold">{i18n.language === "en" ? "Year" : "عام"}</th>
-              <th className="text-center fw-bold">{i18n.language === "en" ? "Annual" : "التقرير السنوي"}</th>
+              <th className="fw-bold">
+                {i18n.language === "en" ? "Year" : "عام"}
+              </th>
+              <th className="text-center fw-bold">
+                {i18n.language === "en" ? "Annual" : "التقرير السنوي"}
+              </th>
             </tr>
           </thead>
           <tbody>
-            {data?.financialResults?.slice(0, 5)?.map((annReport, annReportInd) => {
-              return (
-                <tr className="fw-bold" key={annReportInd}>
-                  <td>{annReport.year}</td>
-                  <td className="text-center">
-                    <a
-                      href={annReport.annualen}
-                      download
-                      target="_blank"
-                      className="btn btn-sm m-1"
-                      style={{
-                        backgroundColor: "rgb(0, 104, 179)",
-                        color: "white",
-                        fontSize: "13px",
-                        fontWeight: "bold",
-                      }}
-                      rel="noreferrer"
-                    >
-                      EN
-                    </a>
-                    <a
-                      href={annReport.annualar}
-                      download
-                      target="_blank"
-                      className="btn btn-sm m-1"
-                      style={{
-                        backgroundColor: "rgb(0, 104, 179)",
-                        color: "white",
-                        fontSize: "13px",
-                        fontWeight: "bold",
-                      }}
-                      rel="noreferrer"
-                    >
-                      Ar
-                    </a>
+            {data?.financialResults
+              ?.slice(0, 15)
+              ?.map((annReport, annReportInd) => {
+                return (
+                  <tr className="fw-bold" key={annReportInd}>
+                    <td>{annReport.year}</td>
+                    <td className="text-center">
+                      <a
+                        href={annReport.annualen}
+                        download
+                        target="_blank"
+                        className="btn btn-sm m-1"
+                        style={{
+                          backgroundColor: "rgb(0, 104, 179)",
+                          color: "white",
+                          fontSize: "13px",
+                          fontWeight: "bold",
+                        }}
+                        rel="noreferrer"
+                      >
+                        EN
+                      </a>
+                      <a
+                        href={annReport.annualar}
+                        download
+                        target="_blank"
+                        className="btn btn-sm m-1"
+                        style={{
+                          backgroundColor: "rgb(0, 104, 179)",
+                          color: "white",
+                          fontSize: "13px",
+                          fontWeight: "bold",
+                        }}
+                        rel="noreferrer"
+                      >
+                        AR
+                      </a>
 
-                    {/* <a
+                      {/* <a
                       href="https://www.instagram.com/fridartestudio"
                       target="_blank"
                       rel="noreferrer"
@@ -91,10 +101,10 @@ function Annual() {
                     >
                       AR
                     </a> */}
-                  </td>
-                </tr>
-              );
-            })}
+                    </td>
+                  </tr>
+                );
+              })}
           </tbody>
         </table>
       </div>

@@ -48,7 +48,7 @@ function FinancialRatios() {
               <div className="col-md-4 col-6 my-2">
                 {i18n.language === "en" ? field?.nameEn : field?.nameAr}
               </div>
-              <div className="col-md-2 col-6 my-2">
+              <div className="col-md-2 col-6 my-2 text-center">
                 {isNegative(field?.values?.value) || "--"}
               </div>
             </React.Fragment>

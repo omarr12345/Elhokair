@@ -1,5 +1,5 @@
 .header {
-  background-image: url("../../Assets/header_2.png");
+  background-image: url("../../Assets/MicrosoftTeams-image\ \(4\).png");
   background-size: cover;
   width: 100% !important;
   height: 350px;
@@ -135,14 +135,18 @@
     text-align: center;
   }
   .top-logo-img img {
-    width: 100px !important;
-    height: 75px !important;
+    width: 163px !important;
+    height: 86px !important;
   }
   .sidebar-head {
     display: none !important;
   }
   .header-content img {
     display: none !important;
+  }
+  .header {
+    background-image: none;
+    background-color: rgb(21, 0, 255);
   }
 }
 

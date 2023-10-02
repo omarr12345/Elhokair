@@ -17,7 +17,8 @@
   background-color: #0068b3;
   color: #fff;
   border: solid 10px white;
-  margin-top: 75px;
+  margin-top: 93px;
+  border-radius: 15px;
 }
 
 .sidebar ul {
@@ -27,6 +28,7 @@
   background: white !important;
   margin: 0px !important;
   height: auto;
+  font-weight: bold;
 }
 
 .sidebar ul li a {
@@ -48,9 +50,7 @@ li {
 .navbar-expand-lg .navbar-nav {
   flex-direction: column;
 }
-/* 
-@media (min-width: 992px) {
-  .nav {
-    overflow: hidden;
-  }
-} */
+
+.offcanvas-body {
+  border-radius: 15px;
+}

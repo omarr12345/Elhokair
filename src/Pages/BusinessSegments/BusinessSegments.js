@@ -1,9 +1,8 @@
 import React from "react";
-import "./BusinessSegments.css";
 import BusinessSegmentsMainComp from "../../Components/BusinessSegmentsComps/BusinessSegmentsMainComp/BusinessSegmentsMainComp";
 function BusinessSegments() {
   return (
-    <div className="business-segments-page">
+    <div className="business-segments-page fw-bold">
       <BusinessSegmentsMainComp />
     </div>
   );

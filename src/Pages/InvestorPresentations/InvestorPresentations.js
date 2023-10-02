@@ -1,10 +1,9 @@
 import React from "react";
-import "./InvestorPresentations.css";
 import InvestorPresentationsMainComp from "../../Components/InvestorPresentationsComps/InvestorPresentationsMainComp";
 
 function InvestorPresentations() {
   return (
-    <div className="investor-presentation">
+    <div className="investor-presentation fw-bold">
       <InvestorPresentationsMainComp />
     </div>
   );

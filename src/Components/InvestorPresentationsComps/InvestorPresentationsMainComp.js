@@ -14,8 +14,8 @@ function InvestorPresentationsMainComp() {
   const { RangePicker } = DatePicker;
   const lastTenDays = new Date(new Date().setDate(new Date().getDate() - 10));
   const [startEndDate, setstartEndDate] = useState([
-    moment(lastTenDays)?.format("YYYY-MM-DD"),
-    moment().format("YYYY-MM-DD"),
+    "01-01-2019",
+    "01-01-2023",
   ]);
   const [reportId, setReportId] = useState(5);
   const { isLoading, isError, data, refetch } = useQuery(
@@ -35,7 +35,11 @@ function InvestorPresentationsMainComp() {
   );
 
   if (isLoading) {
-    return <div><Loader /></div>;
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
   }
 
   if (isError) {
@@ -44,12 +48,16 @@ function InvestorPresentationsMainComp() {
 
   return (
     <>
-      <h4 className="my-5">{i18n.language === "en" ? "Investor Presentation" : "عرض المستثمرين"}</h4>
+      <h4 className="my-5">
+        {i18n.language === "en" ? "Investor Presentation" : "عرض المستثمرين"}
+      </h4>
 
       <div className="investor-presentations-filter d-flex flex-wrap align-items-center pt-2 pb-2 px-2 justify-content-between my-3">
         <div className="d-flex flex-row flex-wrap align-items-center date-range-cont justify-content-evenly">
           <div>
-            <p style={{ color: "white" }} className="mx-2">{i18n.language === "en" ? "Date" : "التاريخ"}</p>
+            <p style={{ color: "white" }} className="mx-2">
+              {i18n.language === "en" ? "Date" : "التاريخ"}
+            </p>
           </div>
           <div>
             <div></div>
@@ -63,24 +71,58 @@ function InvestorPresentationsMainComp() {
               popupClassName="range-picker-pop"
               onChange={(dateValue) => {
                 setstartEndDate(
-                  dateValue?.map((item) => moment(item?.$d).format("YYYY-MM-DD"))
+                  dateValue?.map((item) =>
+                    moment(item?.$d).format("YYYY-MM-DD")
+                  )
                 );
-              }} />
+              }}
+            />
           </div>
         </div>
 
         <div className="text-center">
           <select onChange={(e) => setReportId(e.currentTarget.value)}>
-            <option value="1">{i18n.language === "en" ? "Earnings Call" : "تقرير الأداء"}</option>
-            <option value="2">{i18n.language === "en" ? "Annual Report" : "تقرير سنوي"}</option>
-            <option value="3">{i18n.language === "en" ? "Corporate Guides" : "لوائح و أدلة"}</option>
-            <option value="4">{i18n.language === "en" ? "Minutes Of General Meeting" : "محضر جمعيه عموميه"}</option>
-            <option value="5">{i18n.language === "en" ? "Articles Of Association" : "النظام الأساسي"}</option>
-            <option value="6">{i18n.language === "en" ? "Others" : "أخري"}</option>
-            <option value="7"> {i18n.language === "en" ? "Real Estate Valuation Report" : "تقرير الثمن العقاري"}</option>
-            <option value="8">{i18n.language === "en" ? "Coverage Reports" : "تغطية التقارير"}</option>
-            <option value="9">{i18n.language === "en" ? "Investor Presentation" : "الاصدارات و التقارير الاستثماريه"}</option>
-            <option value="10">{i18n.language === "en" ? "Earnings Call Script" : "سيناريو مكالمات الأرباح"}</option>
+            <option value="1">
+              {i18n.language === "en" ? "Earnings Call" : "تقرير الأداء"}
+            </option>
+            <option value="2">
+              {i18n.language === "en" ? "Annual Report" : "تقرير سنوي"}
+            </option>
+            <option value="3">
+              {i18n.language === "en" ? "Corporate Guides" : "لوائح و أدلة"}
+            </option>
+            <option value="4">
+              {i18n.language === "en"
+                ? "Minutes Of General Meeting"
+                : "محضر جمعيه عموميه"}
+            </option>
+            <option value="5">
+              {i18n.language === "en"
+                ? "Articles Of Association"
+                : "النظام الأساسي"}
+            </option>
+            <option value="6">
+              {i18n.language === "en" ? "Others" : "أخري"}
+            </option>
+            <option value="7">
+              {" "}
+              {i18n.language === "en"
+                ? "Real Estate Valuation Report"
+                : "تقرير الثمن العقاري"}
+            </option>
+            <option value="8">
+              {i18n.language === "en" ? "Coverage Reports" : "تغطية التقارير"}
+            </option>
+            <option value="9">
+              {i18n.language === "en"
+                ? "Investor Presentation"
+                : "الاصدارات و التقارير الاستثماريه"}
+            </option>
+            <option value="10">
+              {i18n.language === "en"
+                ? "Earnings Call Script"
+                : "سيناريو مكالمات الأرباح"}
+            </option>
           </select>
         </div>
 
@@ -95,10 +137,16 @@ function InvestorPresentationsMainComp() {
         <table className="table">
           <thead>
             <tr>
-              <th scope="col" >{i18n.language === "en" ? "Date" : "التاريخ"}</th>
-              <th scope="col">{i18n.language === "en" ? "Report" : "التقرير"}</th>
-              <th scope="col">{i18n.language === "en" ? "Report Type" : "نوع التقرير"}</th>
-              <th scope="col">{i18n.language === "en" ? "Downloads" : " تحميل "}</th>
+              <th scope="col">{i18n.language === "en" ? "Date" : "التاريخ"}</th>
+              <th scope="col">
+                {i18n.language === "en" ? "Report" : "التقرير"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en" ? "Report Type" : "نوع التقرير"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en" ? "Downloads" : " تحميل "}
+              </th>
             </tr>
           </thead>
 
@@ -112,8 +160,16 @@ function InvestorPresentationsMainComp() {
                         "DD/MM/YYYY"
                       )}
                     </td>
-                    <td>{i18n.language === "en" ? investorPresentation.descriptionEn : investorPresentation.descriptionAr}</td>
-                    <td>{i18n.language === "en" ? investorPresentation.typeNameEn : investorPresentation.typeNameAr}</td>
+                    <td>
+                      {i18n.language === "en"
+                        ? investorPresentation.descriptionEn
+                        : investorPresentation.descriptionAr}
+                    </td>
+                    <td>
+                      {i18n.language === "en"
+                        ? investorPresentation.typeNameEn
+                        : investorPresentation.typeNameAr}
+                    </td>
                     <td>
                       <a
                         href={investorPresentation.attachLinkUrlEn}

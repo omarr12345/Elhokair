@@ -1,5 +1,4 @@
 import React from "react";
-import "./CorporateActions.css";
 import { NavLink, Outlet } from "react-router-dom";
 import axios from "axios";
 import { useQuery } from "react-query";
@@ -47,7 +46,8 @@ export function CorporateActions() {
       <ul className="nav nav-underline">
         <li className="nav-item">
           <NavLink
-            className="nav-link" to={{
+            className="nav-link"
+            to={{
               pathname: "/corporate-actions-fullpage/capital-changes",
               search: `${window.location.search}`,
             }}
@@ -57,34 +57,39 @@ export function CorporateActions() {
         </li>
         <li className="nav-item">
           <NavLink
-            className="nav-link" to={{
+            className="nav-link"
+            to={{
               pathname: "/corporate-actions-fullpage/historical-dividends",
               search: `${window.location.search}`,
             }}
           >
-            {i18n.language === "en" ? "Historical Dividends" : "التوزيعات النقدية"}
-
+            {i18n.language === "en"
+              ? "Historical Dividends"
+              : "التوزيعات النقدية"}
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink
-            className="nav-link" to={{
+            className="nav-link"
+            to={{
               pathname: "/corporate-actions-fullpage/recent-changes",
               search: `${window.location.search}`,
             }}
           >
             {i18n.language === "en" ? "Recent Changes" : "أحدث التغييرات"}
-
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink
-            className="nav-link" to={{
+            className="nav-link"
+            to={{
               pathname: "/corporate-actions-fullpage/recent-dividends",
               search: `${window.location.search}`,
             }}
           >
-            {i18n.language === "en" ? "Recent Divideneds" : "أحدث التوزيعات النقدية"}
+            {i18n.language === "en"
+              ? " Recent Dividends"
+              : "أحدث التوزيعات النقدية"}
           </NavLink>
         </li>
       </ul>

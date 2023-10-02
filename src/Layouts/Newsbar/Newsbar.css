@@ -2,6 +2,7 @@
   background-color: #fff;
   height: 45px;
   border: solid 1px #ddd;
+  font-size: 14px;
 }
 
 .newsbar ul {
@@ -36,19 +37,12 @@
 }
 #scroll-text {
   /*animationproperties*/
-  -moz-transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
+
   animation: my-animation 25s linear infinite;
   -webkit-animation: my-animation 25s linear infinite;
 }
 
 #scroll-text-ar {
-  transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
   animation: my-animation-ar 25s linear infinite;
   -webkit-animation: my-animation-ar 25s linear infinite;
 }
@@ -82,7 +76,7 @@
   to {
     -moz-transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+    transform: translateX(-80%);
   }
 }
 
@@ -91,6 +85,6 @@
     transform: translateX(-100%);
   }
   to {
-    transform: translateX(100%);
+    transform: translateX(80%);
   }
 }

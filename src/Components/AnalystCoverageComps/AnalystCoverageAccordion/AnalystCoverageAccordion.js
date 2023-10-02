@@ -47,10 +47,8 @@ function AnalystCoverageAccordion(props) {
               </tr>
 
               <tr>
-                <td className="w-25">
-                  {i18n.language === "en"
-                    ? "--No Of Analysts"
-                    : "عدد المحللين:"}
+                <td className="w-25 mx-5">
+                  {i18n.language === "en" ? "No Of Analysts" : "عدد المحللين:"}
                 </td>
                 <td>-</td>
                 <td>-</td>
@@ -73,9 +71,11 @@ function AnalystCoverageAccordion(props) {
                         aria-controls={"flush-collapse-" + tabIndex}
                         fdprocessedid="jue0ff"
                       >
-                        <span className="mx-5">{i18n.language === "en"
-                          ? tab?.fsFieldCategoryNameEn
-                          : tab?.fsFieldCategoryNameAr}</span>
+                        <span className="mx-5">
+                          {i18n.language === "en"
+                            ? tab?.fsFieldCategoryNameEn
+                            : tab?.fsFieldCategoryNameAr}
+                        </span>
                       </button>
                     </td>
                   </tr>
@@ -85,7 +85,11 @@ function AnalystCoverageAccordion(props) {
                       <tr
                         key={keyValueIndex}
                         id={"flush-collapse-" + tabIndex}
-                        className={tabIndex === 0 ? "accordion-collapse collapse show" : "accordion-collapse collapse"}
+                        className={
+                          tabIndex === 0
+                            ? "accordion-collapse collapse show"
+                            : "accordion-collapse collapse"
+                        }
                         data-bs-parent="#accordionFlushExample"
                         data-mdb-toggle="animation"
                         data-mdb-animation-reset="true"

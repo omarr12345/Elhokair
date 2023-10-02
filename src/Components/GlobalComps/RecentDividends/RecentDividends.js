@@ -9,7 +9,9 @@ function RecentDividends(props) {
   const recentDividends = useOutletContext()?.d2?.recentDividends;
   return (
     <div className="Recent-dividends">
-      <h4 className="mt-5">{i18n.language === "en" ? "Recent Dividends" : "أحدث التوزيعات النقدية"}</h4>
+      <h4 className="mt-5">
+        {i18n.language === "en" ? "Recent Dividends" : "أحدث التوزيعات النقدية"}
+      </h4>
       <hr />
       <div className="d-flex justify-content-between my-2 p-1">
         <div>
@@ -46,7 +48,7 @@ function RecentDividends(props) {
       <div className="d-flex justify-content-between my-2 p-1">
         <div>
           {" "}
-          {i18n.language === "en" ? "dividendPolicy " : " سياسة توزيع الأرباح"}
+          {i18n.language === "en" ? "Dividend Policy " : " سياسة توزيع الأرباح"}
         </div>
         <div>
           {props?.content?.dividendPolicy || recentDividends?.dividendPolicy}
@@ -64,7 +66,7 @@ function RecentDividends(props) {
         <div>
           {moment(
             props?.content?.dividendAnnouncedDate ||
-            recentDividends?.dividendAnnouncedDate
+              recentDividends?.dividendAnnouncedDate
           ).format("DD/MM/YYYY")}
         </div>
       </div>

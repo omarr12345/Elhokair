@@ -8,7 +8,7 @@ import "./AnalystCoverageMainComp.css";
 function AnalystCoverageMainComp() {
   const { i18n } = useTranslation();
   const [fiscalPeriodType, setFiscalPeriodType] = useState("year");
-  //fetch
+  // fetch
   const { isLoading, isError, data, refetch } = useQuery(
     "AnalystCoverageData",
     () =>

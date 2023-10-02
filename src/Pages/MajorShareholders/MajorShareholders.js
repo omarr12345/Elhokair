@@ -1,14 +1,12 @@
 import React from "react";
-import "./MajorShareholders.css";
 import { NavLink, Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 function MajorShareholders() {
-  const { i18n } = useTranslation()
+  const { i18n } = useTranslation();
   return (
     <div className="major-shareholders">
       <ul className="nav nav-underline">
-
         <li className="nav-item">
           <NavLink
             to={{
@@ -17,7 +15,9 @@ function MajorShareholders() {
             }}
             className="nav-link"
           >
-            {i18n.language === "en" ? "Major Shareholders/Foreign Ownership" : "كبار المساهمين"}
+            {i18n.language === "en"
+              ? "Major Shareholders/Foreign Ownership"
+              : "كبار المساهمين"}
           </NavLink>
         </li>
 
@@ -29,7 +29,9 @@ function MajorShareholders() {
               search: `${window.location.search}`,
             }}
           >
-            {i18n.language === "en" ? "Historical Changes" : "التطورات التاريخيه"}
+            {i18n.language === "en"
+              ? "Historical Changes"
+              : "التطورات التاريخيه"}
           </NavLink>
         </li>
       </ul>

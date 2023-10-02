@@ -1,5 +1,4 @@
 import React from "react";
-import "./InvestorCalculator.css";
 import ByAmountInvested from "../../Components/InvestCalculatorComps/ByAmountInvested/ByAmountInvested";
 const InvestorCalculator = () => {
   return (

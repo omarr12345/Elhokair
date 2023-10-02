@@ -1,25 +1,25 @@
 import React from "react";
-import "./Profile.css";
 import { useQuery } from "react-query";
 import axios from "axios";
 import { NavLink, Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Loader from "../../Components/GlobalComps/Loader/Loader";
 
-
 function Profile() {
   const { i18n } = useTranslation();
   const { isLoading, isError, data } = useQuery(
     ["profileData"],
     () =>
-      axios.get(`https://data.argaam.com/api/v1.0/json/ir-api/profile`, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      }).then(res => res.data),
+      axios
+        .get(`https://data.argaam.com/api/v1.0/json/ir-api/profile`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        })
+        .then((res) => res.data),
     {
       refetchOnWindowFocus: false,
-      refetchOnMount: false
+      refetchOnMount: false,
     }
   );
 

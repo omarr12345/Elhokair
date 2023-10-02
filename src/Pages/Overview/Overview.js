@@ -1,9 +1,7 @@
 import React from "react";
-import "./Overview.css";
 import { Outlet, useLocation } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
 
 function Overview() {
   const { i18n } = useTranslation();
@@ -49,7 +47,8 @@ function Overview() {
               pathname: "/corporate-actions",
               search: `${window.location.search}`,
             }}
-            className="nav-link"          >
+            className="nav-link"
+          >
             {i18n.language === "en" ? "Corporate Actions" : "اجراءات الشركه"}
           </NavLink>
         </li>
@@ -59,7 +58,8 @@ function Overview() {
               pathname: "/disclosers",
               search: `${window.location.search}`,
             }}
-            className="nav-link"          >
+            className="nav-link"
+          >
             {i18n.language === "en" ? "Disclosures" : "الافصاحات"}
           </NavLink>
         </li>

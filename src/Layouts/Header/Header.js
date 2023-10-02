@@ -8,6 +8,9 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { RiArrowDownCircleFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { AiFillPhone } from "react-icons/ai";
+import { MdAlternateEmail } from "react-icons/md";
+import { fontSize } from "@mui/system";
 function Header() {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
@@ -68,7 +71,7 @@ function Header() {
                   });
                 }}
               >
-                <i class="bi bi-translate"></i>
+                <i className="bi bi-translate"></i>
                 English
               </button>
             )}
@@ -90,16 +93,21 @@ function Header() {
                     : "sidebar-head text-end"
                 }
               >
-                <h1>{i18n.language === "en" ? "Investors" : "علاقات"}</h1>
-                <h1>{i18n.language === "en" ? "Relations" : "المستثمرين"}</h1>
+                <h1>
+                  {i18n.language === "en" ? "Investor" : "علاقات"} <br />
+                  {i18n.language === "en" ? "Relations" : "المستثمرين"}
+                </h1>
                 <p>
-                  Phone
+                  <AiFillPhone style={{ marginRight: "5px" }} />
                   {i18n.language === "en"
-                    ? ":+996 11 413 4444"
-                    : ":+996 11 413 4444"}
+                    ? "+996 11 413 4444"
+                    : "+996 11 413 4444"}
                 </p>
-                <p>Email :IR@alhokair.com</p>
-              </div>{" "}
+
+                <p>
+                  <MdAlternateEmail /> IR@alhokair.com
+                </p>
+              </div>
             </div>
             <div className="col-md-3 col-lg-2 col-12 col-sm-4">
               <Link to="/chart">
@@ -115,9 +123,10 @@ function Header() {
             </div>
 
             <div className="col-md-2 col-12 col-sm-2">
-              <span>{i18n.language === "en" ? "Price" : "السعر"}</span>&nbsp;
+              <span>{i18n.language === "en" ? "Price" : "السعر"}</span>
+              &nbsp;
               <span className="currency">
-                {i18n.language === "en" ? "(Sar)" : "(ريال)"}
+                {i18n.language === "en" ? "Sar" : "(ريال)"}
               </span>
               <h4>
                 {i18n.language === "en"
@@ -128,13 +137,13 @@ function Header() {
             <div className="col-md-3 col-12 col-sm-2">
               <span>{i18n.language === "en" ? "Change" : " التغير"}</span>&nbsp;
               <span className="currency">
-                {i18n.language === "en" ? "(Sar)" : "(ريال)"}
+                {i18n.language === "en" ? "Sar" : "(ريال)"}
               </span>
               <h4>
                 {i18n.language === "en"
                   ? "-" + formatter(Math.abs(data?.companyStockSummary?.change))
                   : Math.abs(formatter(data?.companyStockSummary?.change)) +
-                  "-"}
+                    "-"}
               </h4>
             </div>
             <div className="col-md-1 col-12 col-sm-2">
@@ -142,12 +151,12 @@ function Header() {
               <h4>
                 {i18n.language === "en"
                   ? "-" +
-                  formatter(
-                    Math.abs(data?.companyStockSummary?.percentageChange)
-                  )
+                    formatter(
+                      Math.abs(data?.companyStockSummary?.percentageChange)
+                    )
                   : Math.abs(
-                    formatter(data?.companyStockSummary?.percentageChange)
-                  ) + "-"}
+                      formatter(data?.companyStockSummary?.percentageChange)
+                    ) + "-"}
               </h4>
             </div>
           </div>

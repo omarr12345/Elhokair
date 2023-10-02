@@ -1,7 +1,8 @@
 @import url("https://fonts.cdnfonts.com/css/avenir");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 
 * {
-  font-family: "Avenir", sans-serif !important;
+  font-family: "Noto Sans", sans-serif !important;
 }
 h3 {
   font-weight: bold !important;
@@ -12,7 +13,7 @@ h3 {
 }
 
 .html-converted-txt span {
-  font-family: "Avenir", sans-serif !important;
+  font-family: "Noto Sans", sans-serif;
   font-size: 16px !important;
 }
 
@@ -73,7 +74,7 @@ hr {
 }
 
 .nav-underline li a {
-  font-size: 13px !important;
+  font-size: 16px !important;
 }
 
 ::-webkit-scrollbar {
@@ -103,11 +104,15 @@ hr {
   justify-content: space-between;
 }
 
+.pagination .active .page-link {
+  background: #0068b3 !important;
+}
+
 @media (min-width: 1200px) {
   .nav-underline {
     position: fixed;
     z-index: 1050;
-    top: 270px;
+    top: 293px;
     min-width: 65%;
     justify-content: space-between;
     align-items: baseline;
@@ -127,7 +132,6 @@ hr {
   }
 
   .nav-link {
-    font-weight: 300 !important;
     color: white !important;
     text-decoration: none;
   }
@@ -216,6 +220,9 @@ hr {
     color: black !important;
     text-decoration: none;
     font-weight: 300;
+  }
+  .nav-underline li a {
+    font-size: 13px !important;
   }
 }
 

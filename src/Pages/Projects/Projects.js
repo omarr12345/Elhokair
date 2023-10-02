@@ -1,5 +1,4 @@
 import React from "react";
-import "./Projects.css";
 import ProjectsTable from "../../Components/ProjectsComps/ProjectsTable";
 
 function Projects() {
