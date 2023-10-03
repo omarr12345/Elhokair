@@ -39,7 +39,10 @@ function FinancialHighlightsSec() {
   return (
     <div className="financial-highlights fw-bold">
       <div className="d-flex justify-content-between align-items-center mt-5 mb-0">
-        <h4>Financial Ratios(M SAR)</h4>
+        <h4>
+          {" "}
+          {i18n.language === "en" ? "Financial Ratios" : "المؤشرات المالية"}
+        </h4>
         <div className="my-2 pills-tabs">
           <span>
             {/* <h5>{i18n.language === "en" ? "Currency" : "العملة"}</h5> */}
