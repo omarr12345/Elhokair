@@ -1,5 +1,4 @@
 import React from "react";
-import "./ForeignOwnership.css";
 import { useQuery } from "react-query";
 import axios from "axios";
 import { useTranslation } from "react-i18next";

@@ -1,5 +1,4 @@
 import React from "react";
-import "./AnalystEstimates.css";
 import { useOutletContext } from "react-router";
 import moment from "moment";
 import { useTranslation } from "react-i18next";
@@ -10,7 +9,11 @@ function AnalystEstimates() {
 
   return (
     <div className="my-5">
-      <h4>{i18n.language === "en" ? "Analyst Estimates" : "اراء و توقعات المحللين"}</h4>
+      <h4>
+        {i18n.language === "en"
+          ? "Analyst Estimates"
+          : "اراء و توقعات المحللين"}
+      </h4>
       <hr />
 
       <hr className="mt-5" />

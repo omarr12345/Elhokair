@@ -1,5 +1,4 @@
 import React from "react";
-import "./MilestonesSec.css";
 import moment from "moment/moment";
 import { useOutletContext } from "react-router";
 import { useTranslation } from "react-i18next";

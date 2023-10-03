@@ -66,7 +66,18 @@ function Colchart(props) {
           animation: 1500,
         },
         animation: true,
-        color: "rgb(40, 102, 160)",
+        color: {
+          linearGradient: {
+            x1: 0,
+            x2: 0,
+            y1: 0,
+            y2: 1,
+          },
+          stops: [
+            [0, "rgb(43, 213, 102)"],
+            [1, "rgb(3, 136, 205)"],
+          ],
+        },
       },
     ],
     legend: {

@@ -31,32 +31,43 @@ function Accordion(props) {
 
         data: [
           props?.currency === "sar" ||
-            detailsModal?.nameEn === "Shares Outstanding (M)"
+          detailsModal?.nameEn === "Shares Outstanding (M)"
             ? Number(detailsModal?.values[0]?.value)
             : Number(detailsModal?.values[0]?.value / 3.76),
 
           props?.currency === "sar" ||
-            detailsModal?.nameEn === "Shares Outstanding (M)"
+          detailsModal?.nameEn === "Shares Outstanding (M)"
             ? Number(detailsModal?.values[1]?.value)
             : Number(detailsModal?.values[1]?.value / 3.76),
 
           props?.currency === "sar" ||
-            detailsModal?.nameEn === "Shares Outstanding (M)"
+          detailsModal?.nameEn === "Shares Outstanding (M)"
             ? Number(detailsModal?.values[2]?.value)
             : Number(detailsModal?.values[2]?.value / 3.76),
 
           props?.currency === "sar" ||
-            detailsModal?.nameEn === "Shares Outstanding (M)"
+          detailsModal?.nameEn === "Shares Outstanding (M)"
             ? Number(detailsModal?.values[3]?.value)
             : Number(detailsModal?.values[3]?.value / 3.76),
 
           props?.currency === "sar" ||
-            detailsModal?.nameEn === "Shares Outstanding (M)"
+          detailsModal?.nameEn === "Shares Outstanding (M)"
             ? Number(detailsModal?.values[4]?.value)
             : Number(detailsModal?.values[4]?.value / 3.76),
         ],
 
-        color: "#0068b3",
+        color: {
+          linearGradient: {
+            x1: 0,
+            x2: 0,
+            y1: 0,
+            y2: 1,
+          },
+          stops: [
+            [0, "rgb(43, 213, 102)"],
+            [1, "rgb(3, 136, 205)"],
+          ],
+        },
         animation: true,
         tooltip: {
           valueDecimals: 2,
@@ -133,8 +144,8 @@ function Accordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
               <td>
                 {props?.currency === "sar"
@@ -142,8 +153,8 @@ function Accordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
               <td>
                 {props?.currency === "sar"
@@ -151,8 +162,8 @@ function Accordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
               <td>
                 {props?.currency === "sar"
@@ -160,8 +171,8 @@ function Accordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
               <td>
                 {props?.currency === "sar"
@@ -169,8 +180,8 @@ function Accordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
             </tr>
             <tr>
@@ -179,36 +190,36 @@ function Accordion(props) {
               <td>
                 {props.type === "quarter"
                   ? moment(
-                    props.content?.tabs[0]?.fields[0]?.values[0]?.forDate
-                  ).format("DD/MM/yyyy")
+                      props.content?.tabs[0]?.fields[0]?.values[0]?.forDate
+                    ).format("DD/MM/yyyy")
                   : props.content?.tabs[0]?.fields[0]?.values[0]?.forYear}
               </td>
               <td>
                 {props.type === "quarter"
                   ? moment(
-                    props.content?.tabs[0]?.fields[0]?.values[1]?.forDate
-                  ).format("DD/MM/yyyy")
+                      props.content?.tabs[0]?.fields[0]?.values[1]?.forDate
+                    ).format("DD/MM/yyyy")
                   : props.content?.tabs[0]?.fields[0]?.values[1]?.forYear}
               </td>
               <td>
                 {props.type === "quarter"
                   ? moment(
-                    props.content?.tabs[0]?.fields[0]?.values[2]?.forDate
-                  ).format("DD/MM/yyyy")
+                      props.content?.tabs[0]?.fields[0]?.values[2]?.forDate
+                    ).format("DD/MM/yyyy")
                   : props.content?.tabs[0]?.fields[0]?.values[2]?.forYear}
               </td>
               <td>
                 {props.type === "quarter"
                   ? moment(
-                    props.content?.tabs[0]?.fields[0]?.values[3]?.forDate
-                  ).format("DD/MM/yyyy")
+                      props.content?.tabs[0]?.fields[0]?.values[3]?.forDate
+                    ).format("DD/MM/yyyy")
                   : props.content?.tabs[0]?.fields[0]?.values[3]?.forYear}
               </td>
               <td>
                 {props.type === "quarter"
                   ? moment(
-                    props.content?.tabs[0]?.fields[0]?.values[4]?.forDate
-                  ).format("DD/MM/yyyy")
+                      props.content?.tabs[0]?.fields[0]?.values[4]?.forDate
+                    ).format("DD/MM/yyyy")
                   : props.content?.tabs[0]?.fields[0]?.values[4]?.forYear}
               </td>
             </tr>
@@ -217,7 +228,10 @@ function Accordion(props) {
           {props.content?.tabs?.map((tab, tabIndex) => {
             return (
               <tbody key={tabIndex} className="accordion" id={tabIndex}>
-                <tr key={tabIndex} className="fw-bold accordion-item text-bg-light">
+                <tr
+                  key={tabIndex}
+                  className="fw-bold accordion-item text-bg-light"
+                >
                   <td colSpan={7} className="text-bg-light">
                     <button
                       className="text-bg-light border-0 fw-bold accordion-button collapsed"
@@ -228,7 +242,9 @@ function Accordion(props) {
                       aria-controls={"flush-collapse-" + tabIndex}
                       fdprocessedid="jue0ff"
                     >
-                      <span className="mx-5">{i18n.language === "en" ? tab.tabNameEn : tab.tabNameAr}</span>
+                      <span className="mx-5">
+                        {i18n.language === "en" ? tab.tabNameEn : tab.tabNameAr}
+                      </span>
                     </button>
                   </td>
                 </tr>
@@ -237,7 +253,11 @@ function Accordion(props) {
                     <tr
                       key={tIndex}
                       id={"flush-collapse-" + tabIndex}
-                      className={tabIndex === 0 ? "accordion-collapse collapse show" : "accordion-collapse collapse"}
+                      className={
+                        tabIndex === 0
+                          ? "accordion-collapse collapse show"
+                          : "accordion-collapse collapse"
+                      }
                       data-bs-parent="#accordionFlushExample"
                       data-mdb-toggle="animation"
                       data-mdb-animation-reset="true"

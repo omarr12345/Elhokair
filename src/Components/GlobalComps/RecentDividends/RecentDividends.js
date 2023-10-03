@@ -1,5 +1,4 @@
 import React from "react";
-import "./RecentDividends.css";
 import moment from "moment";
 import { useOutletContext } from "react-router";
 import { useTranslation } from "react-i18next";

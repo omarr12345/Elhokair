@@ -1,4 +1,3 @@
-import "./FinancialRatiosAccordion.css";
 import { isNegative } from "../../../Services/services";
 // import moment from "moment/moment";
 import React from "react";
@@ -29,32 +28,43 @@ function FinancialRatiosAccordion(props) {
         name: "",
         data: [
           props?.currency === "sar" ||
-            detailsModal?.nameEn === "Shares Outstanding (M)"
+          detailsModal?.nameEn === "Shares Outstanding (M)"
             ? Number(detailsModal?.values[0]?.value)
             : Number(detailsModal?.values[0]?.value / 3.76),
 
           props?.currency === "sar" ||
-            detailsModal?.nameEn === "Shares Outstanding (M)"
+          detailsModal?.nameEn === "Shares Outstanding (M)"
             ? Number(detailsModal?.values[1]?.value)
             : Number(detailsModal?.values[1]?.value / 3.76),
 
           props?.currency === "sar" ||
-            detailsModal?.nameEn === "Shares Outstanding (M)"
+          detailsModal?.nameEn === "Shares Outstanding (M)"
             ? Number(detailsModal?.values[2]?.value)
             : Number(detailsModal?.values[2]?.value / 3.76),
 
           props?.currency === "sar" ||
-            detailsModal?.nameEn === "Shares Outstanding (M)"
+          detailsModal?.nameEn === "Shares Outstanding (M)"
             ? Number(detailsModal?.values[3]?.value)
             : Number(detailsModal?.values[3]?.value / 3.76),
 
           props?.currency === "sar" ||
-            detailsModal?.nameEn === "Shares Outstanding (M)"
+          detailsModal?.nameEn === "Shares Outstanding (M)"
             ? Number(detailsModal?.values[4]?.value)
             : Number(detailsModal?.values[4]?.value / 3.76),
         ],
 
-        color: "#0068b3",
+        color: {
+          linearGradient: {
+            x1: 0,
+            x2: 0,
+            y1: 0,
+            y2: 1,
+          },
+          stops: [
+            [0, "rgb(43, 213, 102)"],
+            [1, "rgb(3, 136, 205)"],
+          ],
+        },
         animation: true,
         tooltip: {
           valueDecimals: 2,
@@ -131,8 +141,8 @@ function FinancialRatiosAccordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
               <td>
                 {props?.currency === "sar"
@@ -140,8 +150,8 @@ function FinancialRatiosAccordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
               <td>
                 {props?.currency === "sar"
@@ -149,8 +159,8 @@ function FinancialRatiosAccordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
               <td>
                 {props?.currency === "sar"
@@ -158,8 +168,8 @@ function FinancialRatiosAccordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
               <td>
                 {props?.currency === "sar"
@@ -167,8 +177,8 @@ function FinancialRatiosAccordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
             </tr>
             <tr>
@@ -176,15 +186,15 @@ function FinancialRatiosAccordion(props) {
               <td></td>
               {props?.type === "year"
                 ? props?.content?.financialRatioFieldsGroups[0]?.financialRatioFieldsGroupFields[0]?.values
-                  ?.slice(0, 5)
-                  .map((d, dateIndex) => {
-                    return <td key={dateIndex}>{d?.year}</td>;
-                  })
+                    ?.slice(0, 5)
+                    .map((d, dateIndex) => {
+                      return <td key={dateIndex}>{d?.year}</td>;
+                    })
                 : props?.content?.financialRatioFieldsGroups[0]?.financialRatioFieldsGroupFields[0]?.values
-                  ?.slice(0, 5)
-                  .map((d, dateIndex) => {
-                    return <td key={dateIndex}>{d?.period}</td>;
-                  })}
+                    ?.slice(0, 5)
+                    .map((d, dateIndex) => {
+                      return <td key={dateIndex}>{d?.period}</td>;
+                    })}
             </tr>
           </thead>
 
@@ -202,9 +212,11 @@ function FinancialRatiosAccordion(props) {
                       aria-controls={"flush-collapse-" + tabIndex}
                       fdprocessedid="jue0ff"
                     >
-                      <span className="mx-5">{i18n.language === "en"
-                        ? tab?.fieldGroupEn
-                        : tab?.fieldGroupAr}</span>
+                      <span className="mx-5">
+                        {i18n.language === "en"
+                          ? tab?.fieldGroupEn
+                          : tab?.fieldGroupAr}
+                      </span>
                     </button>
                   </td>
                 </tr>
@@ -213,7 +225,11 @@ function FinancialRatiosAccordion(props) {
                     <tr
                       key={tIndex}
                       id={"flush-collapse-" + tabIndex}
-                      className={tabIndex === 0 ? "accordion-collapse collapse show" : "accordion-collapse collapse"}
+                      className={
+                        tabIndex === 0
+                          ? "accordion-collapse collapse show"
+                          : "accordion-collapse collapse"
+                      }
                       data-bs-parent="#accordionFlushExample"
                       data-mdb-toggle="animation"
                       data-mdb-animation-reset="true"
@@ -232,38 +248,38 @@ function FinancialRatiosAccordion(props) {
                       </td>
                       <td>
                         {props?.currency === "sar" ||
-                          detailsModal?.nameEn === "Shares Outstanding (M)"
+                        detailsModal?.nameEn === "Shares Outstanding (M)"
                           ? isNegative(Number(t.values[0].value)) || "--"
                           : isNegative(Number(t.values[0].value / 3.76)) ||
-                          "--"}
+                            "--"}
                       </td>
                       <td>
                         {props?.currency === "sar" ||
-                          detailsModal?.nameEn === "Shares Outstanding (M)"
+                        detailsModal?.nameEn === "Shares Outstanding (M)"
                           ? isNegative(Number(t.values[1].value)) || "--"
                           : isNegative(Number(t.values[1].value / 3.76)) ||
-                          "--"}
+                            "--"}
                       </td>
                       <td>
                         {props?.currency === "sar" ||
-                          detailsModal?.nameEn === "Shares Outstanding (M)"
+                        detailsModal?.nameEn === "Shares Outstanding (M)"
                           ? isNegative(Number(t.values[2].value)) || "--"
                           : isNegative(Number(t.values[2].value / 3.76)) ||
-                          "--"}
+                            "--"}
                       </td>
                       <td>
                         {props?.currency === "sar" ||
-                          detailsModal?.nameEn === "Shares Outstanding (M)"
+                        detailsModal?.nameEn === "Shares Outstanding (M)"
                           ? isNegative(Number(t.values[3].value)) || "--"
                           : isNegative(Number(t.values[3].value / 3.76)) ||
-                          "--"}
+                            "--"}
                       </td>
                       <td>
                         {props?.currency === "sar" ||
-                          detailsModal?.nameEn === "Shares Outstanding (M)"
+                        detailsModal?.nameEn === "Shares Outstanding (M)"
                           ? isNegative(Number(t.values[4].value)) || "--"
                           : isNegative(Number(t.values[4].value / 3.76)) ||
-                          "--"}
+                            "--"}
                       </td>
                     </tr>
                   );

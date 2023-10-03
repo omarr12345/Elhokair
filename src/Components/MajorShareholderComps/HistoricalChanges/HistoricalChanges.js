@@ -1,5 +1,4 @@
 import React from "react";
-import "./HistoricalChanges.css";
 import { useQuery } from "react-query";
 import axios from "axios";
 import moment from "moment";
@@ -20,7 +19,11 @@ function HistoricalChanges() {
       .then((res) => res.data)
   );
   if (isLoading) {
-    return <div><Loader /></div>;
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
   }
 
   if (isError) {
@@ -28,7 +31,9 @@ function HistoricalChanges() {
   }
   return (
     <div className="historical-changes my-5">
-      <h4>{i18n.language === "en" ? "Historical Changes" : "التطورات التاريخيه"}</h4>
+      <h4>
+        {i18n.language === "en" ? "Historical Changes" : "التطورات التاريخيه"}
+      </h4>
       <hr />
 
       <div className="table-responsive">
@@ -36,11 +41,26 @@ function HistoricalChanges() {
           <thead>
             <tr>
               <th scope="col">{i18n.language === "en" ? "Date" : "التاريخ"}</th>
-              <th scope="col">{i18n.language === "en" ? "Shareholder" : "المالك"}</th>
-              <th scope="col"> {i18n.language === "en" ? "Prev.Holding" : "نسبة الملكية السابقة"}</th>
-              <th scope="col">{i18n.language === "en" ? "Curr.Holding" : "نسبة الملكية الحالية"}</th>
-              <th scope="col">{i18n.language === "en" ? "Change%" : "%التغيير"}</th>
-              <th scope="col">{i18n.language === "en" ? "Notes" : "الملاحظات"}</th>
+              <th scope="col">
+                {i18n.language === "en" ? "Shareholder" : "المالك"}
+              </th>
+              <th scope="col">
+                {" "}
+                {i18n.language === "en"
+                  ? "Prev.Holding"
+                  : "نسبة الملكية السابقة"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en"
+                  ? "Curr.Holding"
+                  : "نسبة الملكية الحالية"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en" ? "Change%" : "%التغيير"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en" ? "Notes" : "الملاحظات"}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -48,11 +68,17 @@ function HistoricalChanges() {
               return (
                 <tr key={hChangeIndex}>
                   <td> {moment(hChange.forDate).format("DD/MM/YYYY")}</td>
-                  <td>{i18n.language === "en" ? hChange.shareholderNameEn : hChange.shareholderNameAr}</td>
+                  <td>
+                    {i18n.language === "en"
+                      ? hChange.shareholderNameEn
+                      : hChange.shareholderNameAr}
+                  </td>
                   <td>{hChange.previousPercentage || "--"}</td>
                   <td>
                     {hChange.percentage < 5 ? (
-                      <p style={{ color: "red" }}>{i18n.language === "en" ? "Less Than 5%" : "أقل من %5"}</p>
+                      <p style={{ color: "red" }}>
+                        {i18n.language === "en" ? "Less Than 5%" : "أقل من %5"}
+                      </p>
                     ) : (
                       hChange.percentage
                     )}

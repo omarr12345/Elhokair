@@ -142,7 +142,7 @@ function Header() {
               <h4>
                 {i18n.language === "en"
                   ? "-" + formatter(Math.abs(data?.companyStockSummary?.change))
-                  : Math.abs(formatter(data?.companyStockSummary?.change)) +
+                  : formatter(Math.abs(data?.companyStockSummary?.change)) +
                     "-"}
               </h4>
             </div>
@@ -154,8 +154,8 @@ function Header() {
                     formatter(
                       Math.abs(data?.companyStockSummary?.percentageChange)
                     )
-                  : Math.abs(
-                      formatter(data?.companyStockSummary?.percentageChange)
+                  : formatter(
+                      Math.abs(data?.companyStockSummary?.percentageChange)
                     ) + "-"}
               </h4>
             </div>

@@ -1,4 +1,3 @@
-import "./Quarter.css";
 import axios from "axios";
 import { useQuery } from "react-query";
 import { useTranslation } from "react-i18next";

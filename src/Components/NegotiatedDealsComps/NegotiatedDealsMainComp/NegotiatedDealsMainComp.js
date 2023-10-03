@@ -1,9 +1,7 @@
 import React from "react";
-import "./NegotiatedDealMainComp.css";
 import axios from "axios";
 import moment from "moment";
 import { useQuery } from "react-query";
-import "./NegotiatedDealMainComp.css";
 import { formatter, isNegative } from "../../../Services/services";
 import { useTranslation } from "react-i18next";
 import Loader from "../../GlobalComps/Loader/Loader";
@@ -24,25 +22,43 @@ function NegotiatedDealsMainComp() {
   //reFetch
 
   if (isLoading) {
-    return <div><Loader /></div>;
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
   }
   if (isError) {
     return <div>...Error</div>;
   }
   return (
     <div className="negotiated-deals-maincomp">
-      <h4 className="mt-5 mb-3">{i18n.language === "en" ? data.companyNameEn : data.companyNameAr}</h4>
+      <h4 className="mt-5 mb-3">
+        {i18n.language === "en" ? data.companyNameEn : data.companyNameAr}
+      </h4>
       <hr />
       <div className="table-responsive py-4">
         <table className="table">
           <thead>
             <tr>
               <th scope="col">{i18n.language === "en" ? "Date" : "التاريخ"}</th>
-              <th scope="col">{i18n.language === "en" ? "Market Price" : "سعر السهم"}</th>
-              <th scope="col">{i18n.language === "en" ? "Negotiated Price" : "سعر الصفقه"}</th>
-              <th scope="col">{i18n.language === "en" ? "Negotiated Market Price" : "(%) سعر الصفقة الي السهم"}</th>
-              <th scope="col">{i18n.language === "en" ? "Volume Traded" : " قيمة الصفقة"}</th>
-              <th scope="col">{i18n.language === "en" ? "Value Traded" : "كمية الصفقة"}</th>
+              <th scope="col">
+                {i18n.language === "en" ? "Market Price" : "سعر السهم"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en" ? "Negotiated Price" : "سعر الصفقه"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en"
+                  ? "Negotiated Market Price"
+                  : "(%) سعر الصفقة الي السهم"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en" ? "Volume Traded" : " قيمة الصفقة"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en" ? "Value Traded" : "كمية الصفقة"}
+              </th>
             </tr>
           </thead>
 

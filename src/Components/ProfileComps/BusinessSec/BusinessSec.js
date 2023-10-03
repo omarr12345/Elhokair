@@ -1,5 +1,4 @@
 import React from "react";
-import "./BusinessSec.css";
 import { useTranslation } from "react-i18next";
 const BusinessSec = (props) => {
   const { i18n } = useTranslation();

@@ -50,6 +50,7 @@ function Sidebar() {
                 type="button"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
+                className="close-btn"
               >
                 <AiFillCloseCircle
                   style={{

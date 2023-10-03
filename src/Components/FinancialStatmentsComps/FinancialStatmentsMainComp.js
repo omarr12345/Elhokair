@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./FinancialStatmentsMainComp.css";
 import { useQuery } from "react-query";
 import { useEffect } from "react";
 import axios from "axios";

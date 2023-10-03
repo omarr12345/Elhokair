@@ -1,4 +1,3 @@
-import "./BoardReport.css";
 import axios from "axios";
 import { useQuery } from "react-query";
 import { useTranslation } from "react-i18next";
@@ -32,7 +31,6 @@ function BoardReport() {
 
   return (
     <div className="board-report">
-      {console.log(data)}
       <div className="table-responsive">
         <table className="table">
           <thead>

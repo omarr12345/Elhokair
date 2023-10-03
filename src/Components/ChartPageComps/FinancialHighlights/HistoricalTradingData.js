@@ -74,7 +74,7 @@ function HistoricalTradingData() {
 
       <hr />
 
-      <div className="table-responsive py-4">
+      <div className="table-responsive py-4 fw-bold">
         <table className="table">
           <thead>
             <tr>

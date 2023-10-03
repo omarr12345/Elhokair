@@ -2,8 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 
 * {
-  font-family: "Noto Sans", sans-serif !important;
+  font-family: "Cairo", sans-serif !important;
 }
+
 h3 {
   font-weight: bold !important;
 }
@@ -13,7 +14,7 @@ h3 {
 }
 
 .html-converted-txt span {
-  font-family: "Noto Sans", sans-serif;
+  /* font-family: "Noto Sans", sans-serif !important; */
   font-size: 16px !important;
 }
 
@@ -52,8 +53,9 @@ img {
   cursor: pointer;
 }
 .btn.active {
-  background-color: #0068b3 !important;
+  background-color: rgb(0, 104, 179) !important;
   font-weight: bold !important;
+  color: white !important;
 }
 
 hr {
@@ -102,10 +104,16 @@ hr {
 
 .nav-underline {
   justify-content: space-between;
+  box-shadow: 0 0 10px white;
+  padding: 5px;
 }
 
 .pagination .active .page-link {
   background: #0068b3 !important;
+}
+
+.subscription-center {
+  color: gray !important;
 }
 
 @media (min-width: 1200px) {
@@ -142,7 +150,7 @@ hr {
 }
 
 @media (max-width: 1200px) and (min-width: 1025px) {
-  .nav-underline .nav-link.active {
+  .nav-link.active {
     border-bottom: solid 1px blue !important;
     color: blue !important;
     font-weight: 700 !important;
@@ -151,11 +159,25 @@ hr {
   .sub-nav-btn {
     color: blue !important;
     /* background-color: rgb(0, 104, 179) !important; */
+    font-size: 12px !important;
   }
   .nav-link {
     font-weight: 300 !important;
-    color: blue !important;
+    color: white !important;
     text-decoration: none;
+  }
+
+  .nav-underline {
+    position: fixed;
+    z-index: 1050;
+    top: 293px;
+    min-width: 65%;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .nav-underline li a {
+    font-size: 12px !important;
   }
 }
 
@@ -163,10 +185,11 @@ hr {
   .nav-underline {
     position: fixed;
     z-index: 1050;
-    top: 270px;
+    top: 290px;
     min-width: 65%;
     justify-content: space-between;
     align-items: baseline;
+    font-size: 12px !important;
   }
   .nav-underline .nav-link.active {
     border-bottom: solid 1px blue !important;
@@ -185,16 +208,20 @@ hr {
 
   .nav-link {
     font-weight: 300 !important;
-    color: blue !important;
+    color: white !important;
     text-decoration: none;
   }
 
   .navbar-expand-lg .offcanvas {
     background-color: white !important;
   }
+
+  .nav-underline li a {
+    font-size: 12px !important;
+  }
 }
 
-@media (max-width: 993px) {
+@media (max-width: 991px) {
   .navbar-expand-lg .offcanvas {
     background-color: white !important;
   }
@@ -206,6 +233,8 @@ hr {
     align-items: baseline;
     color: black !important;
     margin-top: 56px;
+    padding: 15px;
+    box-shadow: 0 0 5px 0px black;
   }
   .nav-underline .nav-link.active {
     border-bottom: solid 2px black !important;

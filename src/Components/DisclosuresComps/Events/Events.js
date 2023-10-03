@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Events.css";
 import { useOutletContext } from "react-router";
 import moment from "moment";
 import { useTranslation } from "react-i18next";

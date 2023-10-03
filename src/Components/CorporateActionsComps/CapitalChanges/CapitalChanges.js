@@ -1,5 +1,4 @@
 import React from "react";
-import "./CapitalChanges.css";
 import Colchart from "../../GlobalComps/Col-chart/Colchart";
 import moment from "moment";
 import { isNegativePercentage } from "../../../Services/services";
@@ -15,10 +14,14 @@ function CapitalChanges() {
   const data = useOutletContext()?.d2;
   return (
     <div className="capital-changes">
-      <h4 className="mt-5">{i18n.language === "en" ? "Capital Changes" : "تغييرات رأس المال"}</h4>
+      <h4 className="mt-5">
+        {i18n.language === "en" ? "Capital Changes" : "تغييرات رأس المال"}
+      </h4>
       <hr />
       <Colchart content={data?.capitalChartData} />
-      <h4 className="mb-3">{i18n.language === "en" ? "Capital Changes" : "تغييرات رأس المال"}</h4>
+      <h4 className="mb-3">
+        {i18n.language === "en" ? "Capital Changes" : "تغييرات رأس المال"}
+      </h4>
       <hr />
       <div className="table-responsive">
         <table className="table fw-bold">
@@ -42,8 +45,13 @@ function CapitalChanges() {
               >
                 {i18n.language === "en" ? "After" : "بعد"}
               </th>
-              <th scope="col"> {i18n.language === "en" ? "Change%" : "التغيير%"}</th>
-              <th scope="col">{i18n.language === "en" ? "Notes" : "الملاحظات"}</th>
+              <th scope="col">
+                {" "}
+                {i18n.language === "en" ? "Change%" : "التغيير%"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en" ? "Notes" : "الملاحظات"}
+              </th>
               <th scope="col">{i18n.language === "en" ? "Link" : "الرابط"}</th>
             </tr>
           </thead>
@@ -52,7 +60,9 @@ function CapitalChanges() {
               <td></td>
               <td></td>
               <td className="text-center" style={{ borderBottom: "solid 1px" }}>
-                {i18n.language === "en" ? " Capital(M RIYAL)" : "(ريال) رأس المال"}
+                {i18n.language === "en"
+                  ? " Capital(M RIYAL)"
+                  : "(ريال) رأس المال"}
               </td>
               <td
                 className="text-center"
@@ -64,8 +74,9 @@ function CapitalChanges() {
                 className="text-center"
                 style={{ borderLeft: "solid 1px", borderBottom: "solid 1px" }}
               >
-                {i18n.language === "en" ? " Capital(M RIYAL)" : "(ريال) رأس المال"}
-
+                {i18n.language === "en"
+                  ? " Capital(M RIYAL)"
+                  : "(ريال) رأس المال"}
               </td>
               <td className="text-center" style={{ borderBottom: "solid 1px" }}>
                 {i18n.language === "en" ? "Shares(M)" : "عدد الأسهم (مليون)"}
@@ -79,7 +90,11 @@ function CapitalChanges() {
               return (
                 <tr key={capChangeIndex}>
                   <td>{moment(capChange?.tableDate).format("DD/MM/YYYY")}</td>
-                  <td>{i18n.language === "en" ? capChange?.typeEn : capChange?.typeAr}</td>
+                  <td>
+                    {i18n.language === "en"
+                      ? capChange?.typeEn
+                      : capChange?.typeAr}
+                  </td>
                   <td className="text-center">{capChange?.currentCapital}</td>
                   <td className="text-center">{capChange?.currentShares}</td>
                   <td className="text-center">{capChange?.newCapital}</td>
@@ -88,7 +103,7 @@ function CapitalChanges() {
                     {isNegativePercentage(
                       ((capChange?.currentCapital - capChange?.newCapital) /
                         capChange?.currentCapital) *
-                      100
+                        100
                     )}
                   </td>
                   <td
@@ -100,7 +115,13 @@ function CapitalChanges() {
                     <BiNote className="notes-modal-icon" />
                   </td>
                   <td className="text-center">
-                    <a href={i18n.language === "en" ? capChange?.conditionalLinkEn : capChange?.conditionalLinkAr}>
+                    <a
+                      href={
+                        i18n.language === "en"
+                          ? capChange?.conditionalLinkEn
+                          : capChange?.conditionalLinkAr
+                      }
+                    >
                       <AiOutlineLink />
                     </a>
                   </td>
@@ -110,7 +131,9 @@ function CapitalChanges() {
           </tbody>
         </table>
       </div>
-      <NotesModal content={i18n.language === "en" ? current?.notesEn : current?.notesAr} />
+      <NotesModal
+        content={i18n.language === "en" ? current?.notesEn : current?.notesAr}
+      />
     </div>
   );
 }

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { isNegative } from "../../../Services/services";
 import { ChartModal } from "../../GlobalComps/ChartModal/ChartModal";
-import "./BusinessSegmentsAccordion.css";
 
 function BusinessSegmentsAccordion(props) {
   const { i18n } = useTranslation();
@@ -47,7 +46,18 @@ function BusinessSegmentsAccordion(props) {
             : Number(detailsModal?.periodicValues[4]?.value / 3.76),
         ],
 
-        color: "#0068b3",
+        color: {
+          linearGradient: {
+            x1: 0,
+            x2: 0,
+            y1: 0,
+            y2: 1,
+          },
+          stops: [
+            [0, "rgb(43, 213, 102)"],
+            [1, "rgb(3, 136, 205)"],
+          ],
+        },
         animation: true,
         tooltip: {
           valueDecimals: 2,
@@ -117,8 +127,8 @@ function BusinessSegmentsAccordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
               <td>
                 {props?.currency === "sar"
@@ -126,8 +136,8 @@ function BusinessSegmentsAccordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
               <td>
                 {props?.currency === "sar"
@@ -135,8 +145,8 @@ function BusinessSegmentsAccordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
               <td>
                 {props?.currency === "sar"
@@ -144,8 +154,8 @@ function BusinessSegmentsAccordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
               <td>
                 {props?.currency === "sar"
@@ -153,8 +163,8 @@ function BusinessSegmentsAccordion(props) {
                     ? "Million SAR"
                     : "مليون ريال"
                   : i18n.language === "en"
-                    ? "Million USD"
-                    : "مليون دولار"}
+                  ? "Million USD"
+                  : "مليون دولار"}
               </td>
             </tr>
             <tr>
@@ -162,21 +172,24 @@ function BusinessSegmentsAccordion(props) {
               <td></td>
               {props.type === "year"
                 ? props?.content[0]?.businessSegments[0]?.periodicValues
-                  ?.slice(0, 5)
-                  ?.map((x, xIndex) => {
-                    return <td key={xIndex}>{x?.forDate}</td>;
-                  })
+                    ?.slice(0, 5)
+                    ?.map((x, xIndex) => {
+                      return <td key={xIndex}>{x?.forDate}</td>;
+                    })
                 : props?.content[0]?.businessSegments[0]?.periodicValues
-                  ?.slice(0, 5)
-                  ?.map((x, xIndex) => {
-                    return <td key={xIndex}>{x?.forDate}</td>;
-                  })}
+                    ?.slice(0, 5)
+                    ?.map((x, xIndex) => {
+                      return <td key={xIndex}>{x?.forDate}</td>;
+                    })}
             </tr>
           </thead>
           {props?.content?.map((r, rIndex) => {
             return (
               <tbody key={rIndex} className="accordion" id={rIndex}>
-                <tr key={rIndex} className="fw-bold accordion-item text-bg-light">
+                <tr
+                  key={rIndex}
+                  className="fw-bold accordion-item text-bg-light"
+                >
                   <td colSpan={7}>
                     <button
                       className="text-bg-light accordion-button close-sign fw-bold collapsed"
@@ -187,9 +200,11 @@ function BusinessSegmentsAccordion(props) {
                       aria-controls={"flush-collapse-" + rIndex}
                       fdprocessedid="jue0ff"
                     >
-                      <span className="mx-5">{i18n.language === "en"
-                        ? r?.fsFieldNameEn
-                        : r?.fsFieldNameAr}</span>
+                      <span className="mx-5">
+                        {i18n.language === "en"
+                          ? r?.fsFieldNameEn
+                          : r?.fsFieldNameAr}
+                      </span>
                     </button>
                   </td>
                 </tr>
@@ -199,7 +214,11 @@ function BusinessSegmentsAccordion(props) {
                     <tr
                       key={bsIndex}
                       id={"flush-collapse-" + rIndex}
-                      className={rIndex === 0 ? "accordion-collapse collapse show" : "accordion-collapse collapse"}
+                      className={
+                        rIndex === 0
+                          ? "accordion-collapse collapse show"
+                          : "accordion-collapse collapse"
+                      }
                       data-bs-parent="#accordionFlushExample"
                       data-mdb-toggle="animation"
                       data-mdb-animation-reset="true"

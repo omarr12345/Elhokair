@@ -13,7 +13,7 @@ function FinancialReports() {
               pathname: "/financial-reports/annual",
               search: `${window.location.search}`,
             }}
-            className="btn btn-primary fw-bold m-2"
+            className="btn fw-bold m-2"
           >
             {i18n.language === "en" ? "Annual" : "سنوي"}
           </NavLink>
@@ -24,7 +24,7 @@ function FinancialReports() {
               pathname: "/financial-reports/quarter",
               search: `${window.location.search}`,
             }}
-            className="btn btn-primary fw-bold m-2"
+            className="btn fw-bold m-2"
           >
             {i18n.language === "en" ? "Quarter" : "ربع سنوي"}
           </NavLink>
@@ -35,7 +35,7 @@ function FinancialReports() {
               pathname: "/financial-reports/board-report",
               search: `${window.location.search}`,
             }}
-            className="btn btn-primary fw-bold m-2"
+            className="btn fw-bold m-2"
           >
             {i18n.language === "en" ? "Board" : " تقرير مجلس الادارة"}
           </NavLink>

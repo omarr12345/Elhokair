@@ -1,5 +1,4 @@
 import { useOutletContext } from "react-router-dom";
-import "./MajorShareholdersSec.css";
 import { useTranslation } from "react-i18next";
 function MajorShareholdersSec() {
   const { i18n } = useTranslation();

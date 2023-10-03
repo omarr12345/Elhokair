@@ -1,5 +1,4 @@
 import React from "react";
-import "./FinancialRatiosPageMainComp.css";
 import axios from "axios";
 import { useQuery } from "react-query";
 import { useEffect, useState } from "react";

@@ -1,5 +1,4 @@
 import React from "react";
-import "./BasicInfoSec.css";
 import BusinessSec from "../BusinessSec/BusinessSec";
 import { useOutletContext } from "react-router";
 import ClassificationSec from "../ClassificationSec/ClassificationSec";
@@ -11,7 +10,6 @@ function BasicInfoSec() {
 
   return (
     <div className="basic-info">
-      {console.log(d)}
       <h4 className="mt-5 mb-3">
         {i18n.language === "en" ? "Business" : "مجال العمل"}
       </h4>
@@ -25,50 +23,36 @@ function BasicInfoSec() {
         content={i18n.language === "en" ? d?.summaryEn : d?.summaryAr}
       />
       <div className="row">
-        <div className="col-md-4 col-12">
+        <div className="col-md-6 col-12">
           <h4>
             {i18n.language === "en" ? "Basic Info" : "المعلومات الأساسيه"}
           </h4>
           <hr />
           <div className="col-md-12 d-flex justify-content-between my-2">
-            <div className="w-50">
-              {i18n.language === "en" ? "City" : "المدينه"}
-            </div>
-            <div className="w-50">
-              {i18n.language === "en" ? d?.cityNameEn : d?.cityNameAr}
-            </div>
+            <div>{i18n.language === "en" ? "City" : "المدينه"}</div>
+            <div>{i18n.language === "en" ? d?.cityNameEn : d?.cityNameAr}</div>
           </div>
           <div className="col-md-12 d-flex justify-content-between my-2">
-            <div className="w-50">
+            <div>
               {i18n.language === "en" ? "Website" : "الموقع الالكتروني"}
             </div>
-            <div className="w-50">{d?.websiteURL}</div>
+            <div>{d?.websiteURL}</div>
           </div>
           <div className="col-md-12 d-flex justify-content-between my-2">
-            <div className="w-50">
-              {i18n.language === "en" ? "Email" : "الايميل"}
-            </div>
-            <div className="w-50">{d?.email}</div>
+            <div>{i18n.language === "en" ? "Email" : "الايميل"}</div>
+            <div>{d?.email}</div>
           </div>
           <div className="col-md-12 d-flex justify-content-between my-2">
-            <div className="w-50">
-              {i18n.language === "en" ? "Phone" : "الهاتف"}
-            </div>
-            <div className="w-50">{d?.phone}</div>
+            <div>{i18n.language === "en" ? "Phone" : "الهاتف"}</div>
+            <div>{d?.phone}</div>
           </div>
           <div className="col-md-12 d-flex justify-content-between my-2">
-            <div className="w-50">
-              {i18n.language === "en" ? "Fax" : "فاكس"}
-            </div>
-            <div className="w-50">{d?.fax}</div>
+            <div>{i18n.language === "en" ? "Fax" : "فاكس"}</div>
+            <div>{d?.fax}</div>
           </div>
           <div className="col-md-12 d-flex justify-content-between my-2">
-            <div className="w-50">
-              {i18n.language === "en" ? "P.O Box" : "صندوق البريد"}
-            </div>
-            <div className="w-50">
-              {i18n.language === "en" ? d?.poBoxEn : d?.poBoxAr}
-            </div>
+            <div>{i18n.language === "en" ? "P.O Box" : "صندوق البريد"}</div>
+            <div>{i18n.language === "en" ? d?.poBoxEn : d?.poBoxAr}</div>
           </div>
           <div className="col-md-12 d-flex justify-content-between my-2">
             <div className="w-50">
@@ -79,7 +63,7 @@ function BasicInfoSec() {
             </div>
           </div>
         </div>
-        <div className="col-md-8 col-12 mb-5">
+        <div className="col-md-6 col-12 mb-5">
           <ClassificationSec />
         </div>
       </div>

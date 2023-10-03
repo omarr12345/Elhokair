@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./HistoricalDividends.css";
 import { useOutletContext } from "react-router";
 import Colchart from "../../GlobalComps/Col-chart/Colchart";
 import { BiNote } from "react-icons/bi";
@@ -13,22 +12,40 @@ function HistoricalDividends() {
   const [current, setCurrent] = useState("");
   return (
     <div className="historical-dividends">
-      <h4 className="mt-5">{i18n.language === "en" ? "Dividend History" : " التوزيعات النقدية"}</h4>
+      <h4 className="mt-5">
+        {i18n.language === "en" ? "Dividend History" : " التوزيعات النقدية"}
+      </h4>
       <hr />
       <Colchart content_2={data?.dividendsChartData} />
       <br />
-      <h4>{i18n.language === "en" ? "Dividend History" : " التوزيعات النقدية"}</h4>
+      <h4>
+        {i18n.language === "en" ? "Dividend History" : " التوزيعات النقدية"}
+      </h4>
 
       <div className="table-responsive">
         <table className="table fw-bold">
           <thead>
             <tr>
-              <th scope="col">{i18n.language === "en" ? "Announcement" : "تاريخ الاعلان"}</th>
-              <th scope="col">{i18n.language === "en" ? "Ex-dividened" : "تاريخ الاستحقاق"}</th>
-              <th scope="col">{i18n.language === "en" ? "Dividend History" : "تاريخ التوزيع"}</th>
-              <th scope="col">{i18n.language === "en" ? "Dividends (M Riyal)" : " إجمالي التوزيعات النقدية (مليون ريال)	"}</th>
-              <th scope="col">{i18n.language === "en" ? "Dividends" : "التوزيع النقدي"}</th>
-              <th scope="col">{i18n.language === "en" ? "Notes" : "الملاحظات"}</th>
+              <th scope="col">
+                {i18n.language === "en" ? "Announcement" : "تاريخ الاعلان"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en" ? "Ex-dividened" : "تاريخ الاستحقاق"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en" ? "Dividend History" : "تاريخ التوزيع"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en"
+                  ? "Dividends (M Riyal)"
+                  : " إجمالي التوزيعات النقدية (مليون ريال)	"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en" ? "Dividends" : "التوزيع النقدي"}
+              </th>
+              <th scope="col">
+                {i18n.language === "en" ? "Notes" : "الملاحظات"}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -64,7 +81,9 @@ function HistoricalDividends() {
         </table>
       </div>
 
-      <NotesModal content={i18n.language === "en" ? current?.notesEn : current?.notesAr} />
+      <NotesModal
+        content={i18n.language === "en" ? current?.notesEn : current?.notesAr}
+      />
     </div>
   );
 }

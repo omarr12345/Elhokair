@@ -1,5 +1,4 @@
 import React from "react";
-import "./Overview.css";
 const OverviewSec = (props) => {
   return (
     <div className="my-5">

@@ -1,5 +1,4 @@
 import React from "react";
-import "./AnalystCoverageAccordion.css";
 import { isNegative } from "../../../Services/services";
 import moment from "moment";
 import { useTranslation } from "react-i18next";

@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import "./News.css";
 import { useOutletContext } from "react-router";
 import moment from "moment";
 import { useTranslation } from "react-i18next";
 import { AiOutlineDownCircle } from "react-icons/ai";
 import NotesModal from "../../GlobalComps/NotesModal/NotesModal";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ResponsivePagination from 'react-responsive-pagination';
-import 'react-responsive-pagination/themes/classic.css';
+import ResponsivePagination from "react-responsive-pagination";
+import "react-responsive-pagination/themes/classic.css";
 function News() {
   const [current, setCurrent] = useState();
   const [page, setPage] = useState(1);

@@ -1,5 +1,4 @@
 import React from "react";
-import "./RecentChanges.css";
 import moment from "moment/moment";
 import { useOutletContext } from "react-router";
 import { useTranslation } from "react-i18next";
@@ -10,7 +9,9 @@ function RecentChanges(props) {
 
   return (
     <div className="recent-changes">
-      <h4 className="mt-5">{i18n.language === "en" ? "Recent Changes" : "التغييرات الأخيرة"}</h4>
+      <h4 className="mt-5">
+        {i18n.language === "en" ? "Recent Changes" : "التغييرات الأخيرة"}
+      </h4>
       <hr />
       <div className="d-flex justify-content-between my-2 p-1">
         <div>

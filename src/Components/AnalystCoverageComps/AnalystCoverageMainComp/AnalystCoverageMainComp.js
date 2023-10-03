@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { useQuery } from "react-query";
 import Loader from "../../GlobalComps/Loader/Loader";
 import AnalystCoverageAccordion from "../AnalystCoverageAccordion/AnalystCoverageAccordion";
-import "./AnalystCoverageMainComp.css";
 function AnalystCoverageMainComp() {
   const { i18n } = useTranslation();
   const [fiscalPeriodType, setFiscalPeriodType] = useState("year");

@@ -1,11 +1,9 @@
 import React from "react";
-import "./Opinions.css";
 import { useQuery } from "react-query";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 import moment from "moment";
 import { formatter, isNegativePercentage } from "../../../Services/services";
-
 import Loader from "../../../Components/GlobalComps/Loader/Loader";
 
 function Opinions() {

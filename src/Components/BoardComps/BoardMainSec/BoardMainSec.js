@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./BoardMainSec.css";
 import ChairmanCard from "../Card/ChairmanCard";
 import Modal from "../../GlobalComps/Modal/Modal";
 import { useTranslation } from "react-i18next";

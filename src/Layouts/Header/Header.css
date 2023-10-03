@@ -37,14 +37,6 @@
   display: none !important;
 }
 
-/* .top-img-cont {
-  height: 25%;
-} */
-
-/* .head-cont {
-  height: 65%;
-} */
-
 @media (max-width: 991px) and (min-width: 768px) {
   .header span {
     font-size: 25px;
@@ -61,9 +53,6 @@
   .sidebar-head {
     display: none !important;
   }
-  /* .nav-undeline li a {
-    color: black !important;
-  } */
 }
 
 @media (max-width: 768px) and (min-width: 530px) {

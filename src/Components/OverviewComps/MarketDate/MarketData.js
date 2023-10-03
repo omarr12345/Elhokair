@@ -1,5 +1,5 @@
 import React from "react";
-import "./MarketData.css";
+
 import { useQuery } from "react-query";
 import axios from "axios";
 import { formatter, isNegativePercentage } from "../../../Services/services";
@@ -96,9 +96,7 @@ function MarketData() {
             className="col-md-3 col-sm-3 col-5"
             style={{ borderRight: "2px solid gray" }}
           >
-            <p className="hr">
-              {i18n.language === "en" ? "Volume" : " الحجم"}
-            </p>
+            <p className="hr">{i18n.language === "en" ? "Volume" : " الحجم"}</p>
             <span>
               <h5>{formatter(firstData?.data?.volume)}</h5>
             </span>

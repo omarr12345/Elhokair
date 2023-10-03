@@ -36,6 +36,14 @@
   text-align: center;
 }
 
+.ant-picker {
+  margin-top: 15px;
+}
+
+.ant-picker input {
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
     width: 50%;

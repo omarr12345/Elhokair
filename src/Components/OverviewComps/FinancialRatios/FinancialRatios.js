@@ -1,5 +1,4 @@
 import React from "react";
-import "./FinancialRatios.css";
 import { useQuery } from "react-query";
 import axios from "axios";
 import { isNegative } from "../../../Services/services";
